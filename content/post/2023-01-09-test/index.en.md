@@ -14,6 +14,6 @@ tags:
   - Equity Research
 ---
 
-Hello Osana, I am Mehmet. How do you feel today?
+Hello World!, It's Mehmet.
 
-Thsi is my test post in my website. Hope you are enjoing it.
+This is my test post in my website. Hope you are enjoying it.
