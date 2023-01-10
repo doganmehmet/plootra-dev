@@ -18,14 +18,5 @@
 This is my test post in my website. Hope you are enjoying it.</description>
     </item>
     
-    <item>
-      <title>Test 2</title>
-      <link>https://plootra.com/post/2023-01-09-test-2/</link>
-      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://plootra.com/post/2023-01-09-test-2/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

@@ -9,6 +9,18 @@
     <copyright>Copyright © 2023</copyright>
     <lastBuildDate>Mon, 09 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://plootra.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About</title>
+      <link>https://plootra.com/about/</link>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://plootra.com/about/</guid>
+      <description>Hi There,
+I am Mehmet. I have a background in Quantitative Finance and I like doing stuff with R and Python.
+This website is made with R using &amp;ldquo;blogdown&amp;rdquo; package and deployed to Digital Ocean. Thanks Yihui Xie for this amazing package.
+If you would like to learn more about &amp;ldquo;blogdown&amp;rdquo; visit: https://bookdown.org/yihui/blogdown/</description>
+    </item>
+    
+    <item>
       <title>Contact</title>
       <link>https://plootra.com/contact/</link>
       <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
@@ -25,15 +37,6 @@
       <guid>https://plootra.com/post/2023-01-09-test/</guid>
       <description>Hello World!, It&amp;rsquo;s Mehmet.
 This is my test post in my website. Hope you are enjoying it.</description>
-    </item>
-    
-    <item>
-      <title>Test 2</title>
-      <link>https://plootra.com/post/2023-01-09-test-2/</link>
-      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://plootra.com/post/2023-01-09-test-2/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -100,18 +103,6 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       
       <guid>https://plootra.com/post/emoji-support/</guid>
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://plootra.com/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://plootra.com/about/</guid>
-      <description>This webite is made with Hugo.
-I am Mehmet.
-Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
-Hugo makes use of a variety of open source projects including:</description>
     </item>
     
   </channel>

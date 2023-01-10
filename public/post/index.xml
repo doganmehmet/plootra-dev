@@ -19,15 +19,6 @@ This is my test post in my website. Hope you are enjoying it.</description>
     </item>
     
     <item>
-      <title>Test 2</title>
-      <link>https://plootra.com/post/2023-01-09-test-2/</link>
-      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://plootra.com/post/2023-01-09-test-2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Hello R Markdown</title>
       <link>https://plootra.com/post/2020-12-01-r-rmarkdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>

@@ -5,6 +5,9 @@
     <loc>https://plootra.com/</loc>
     <lastmod>2023-01-09T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://plootra.com/about/</loc>
+    <lastmod>2023-01-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://plootra.com/categories/</loc>
     <lastmod>2023-01-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -42,9 +45,6 @@
     <lastmod>2023-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/post/2023-01-09-test/</loc>
-    <lastmod>2023-01-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://plootra.com/post/2023-01-09-test-2/</loc>
     <lastmod>2023-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/post/2020-12-01-r-rmarkdown/</loc>
@@ -112,9 +112,6 @@
   </url><url>
     <loc>https://plootra.com/post/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://plootra.com/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/tags/index/</loc>
   </url>
