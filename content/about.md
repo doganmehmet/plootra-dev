@@ -9,7 +9,7 @@ description: Plootra, made with the "blogdown" package in R
 title: About
 ---
 
-Hi There, 
+Hi there, 
 
 I am Mehmet. I have a background in Quantitative Finance and I like doing stuff with R and Python. 
 
