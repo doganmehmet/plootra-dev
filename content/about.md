@@ -18,4 +18,6 @@ This website is made with R using "blogdown" package and deployed to Digital Oce
 If you would like to learn more about "blogdown" visit:
 https://bookdown.org/yihui/blogdown/
 
+To download R:
+https://cran.r-project.org/bin/windows/base/
 
