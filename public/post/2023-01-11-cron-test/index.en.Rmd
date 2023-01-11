@@ -14,3 +14,8 @@ If you see this post it means that crontab successfully worked. Otherwise it's m
 ```{r}
 summary(cars)
 ```
+
+
+```{r}
+plot(cars)
+```
