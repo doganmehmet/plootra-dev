@@ -1,0 +1,16 @@
+---
+title: Cron test
+author: Mehmet Dogan
+date: '2023-01-11'
+slug: []
+categories:
+  - R
+tags: []
+---
+
+
+If you see this post it means that crontab successfully worked. Otherwise it's madness. 
+
+```{r}
+summary(cars)
+```
