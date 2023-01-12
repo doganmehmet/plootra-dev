@@ -9,7 +9,7 @@ tags: []
 ---
 
 
-If you see this post it means that crontab successfully worked. Otherwise it's madness. 
+If you see the plot in this post it means that crontab successfully worked. Otherwise it's madness. 
 
 ```{r}
 summary(cars)
