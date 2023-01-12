@@ -14,8 +14,10 @@
       <pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://plootra.com/post/2023-01-11-cron-test/</guid>
-      <description>If you see this post it means that crontab successfully worked. Otherwise it&amp;rsquo;s madness.
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.:19.0 3rd Qu.: 56.00 ## Max. :25.0 Max. :120.00 plot(cars) </description>
+      <description>If you see this post test is successfull:
+Seems like it is working. Everthing looks automated.
+If you see the plot in this post it means that crontab successfully worked. Otherwise it&amp;rsquo;s madness.
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.:19.0 3rd Qu.: 56.00 ## Max. :25.</description>
     </item>
     
     <item>

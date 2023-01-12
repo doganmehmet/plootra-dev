@@ -8,8 +8,11 @@ categories:
 tags: []
 ---
 
+If you see this post test is successfull:
 
-If you see this post it means that crontab successfully worked. Otherwise it's madness. 
+Seems like it is working. Everthing looks automated.
+
+If you see the plot in this post it means that crontab successfully worked. Otherwise it's madness. 
 
 
 ```r
