@@ -8,6 +8,7 @@ enableInlineShortcodes: yes
 ignoreErrors: error-remote-getjson
 theme: hugo-paper
 title: Plootra
+# disqusShortname: mehmet # to enable Disqus in the website
 params:
   # avatar: nanxiaobei@gmail.com
   bio: Discover fresh research
