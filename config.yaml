@@ -7,8 +7,8 @@ DefaultContentLanguage: en
 enableInlineShortcodes: yes
 ignoreErrors: error-remote-getjson
 theme: hugo-paper
-title: Plootra
-# disqusShortname: mehmet # to enable Disqus in the website
+title: Plootra is your guide to anlytics for financial markets and investing with R and Python
+# disqusShortname: xxxxx # to enable Disqus in the website
 params:
   # avatar: nanxiaobei@gmail.com
   bio: Discover fresh research
