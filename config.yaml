@@ -8,7 +8,7 @@ enableInlineShortcodes: yes
 ignoreErrors: error-remote-getjson
 theme: hugo-paper
 title: Plootra
-description:  Your guide to anlytics for financial markets and investing with R and Python
+# description:  Your guide to anlytics for financial markets and investing with R and Python
 # disqusShortname: xxxxx # to enable Disqus in the website
 params:
   # avatar: nanxiaobei@gmail.com
