@@ -11,8 +11,9 @@ title: Plootra
 # disqusShortname: xxxxx # to enable Disqus in the website
 
 
+
 permalinks:
-  posts: /:year/:month/:slug/
+  posts: /:year/:month/:slug/ #originally it was /:year/:month/:title/
 
 params:
   # avatar: nanxiaobei@gmail.com

@@ -2,14 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://plootra.com/</loc>
+    <lastmod>2023-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/post/</loc>
+    <lastmod>2023-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/post/second-test/</loc>
+    <lastmod>2023-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/post/third-test/</loc>
+    <lastmod>2023-01-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://plootra.com/about/</loc>
     <lastmod>2023-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/contact/</loc>
     <lastmod>2023-01-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://plootra.com/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://plootra.com/categories/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
@@ -18,9 +27,6 @@
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://plootra.com/tags/plot/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://plootra.com/post/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://plootra.com/categories/r/</loc>
