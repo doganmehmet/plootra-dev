@@ -10,6 +10,9 @@ theme: "hugo-paper"
 title: Plootra
 # disqusShortname: xxxxx # to enable Disqus in the website
 
+permalinks:
+  posts: /:year/:month/:slug/
+
 params:
   # avatar: nanxiaobei@gmail.com
   bio: Discover fresh research
@@ -21,6 +24,7 @@ params:
   description:  Your guide to anlytics for financial markets and investing
   rss: true
   graphCommentId: plootra
+  showReadingTime: true
 
   
 markup:
