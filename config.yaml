@@ -9,7 +9,7 @@ ignoreErrors: error-remote-getjson
 theme: "hugo-paper"
 title: Plootra
 # disqusShortname: xxxxx # to enable Disqus in the website
-
+googleAnalytics: G-2MNSX43ZM3
 
 
 permalinks:
