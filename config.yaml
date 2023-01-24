@@ -6,7 +6,7 @@ languageCode: en
 DefaultContentLanguage: en
 enableInlineShortcodes: yes
 ignoreErrors: error-remote-getjson
-theme: hugo-paper
+theme: "hugo-paper"
 title: Plootra
 # disqusShortname: xxxxx # to enable Disqus in the website
 
@@ -15,10 +15,14 @@ params:
   bio: Discover fresh research
   color: linen
   github: doganmehmet
-  # instagram: nan.xiaobei
-  # name: Lee
-  # twitter: nanxiaobei
-  description:  Your guide to anlytics for financial markets and investing with R and Python
+  # instagram: n/a
+  # name: Mehmet
+  # twitter: n/a
+  description:  Your guide to anlytics for financial markets and investing
+  rss: true
+  graphCommentId: plootra
+
+  
 markup:
   goldmark:
     renderer:

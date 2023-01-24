@@ -27,6 +27,8 @@
 
 
 
+
+
 <html
   class="not-ready text-sm lg:text-base"
   style="--bg: #faf6f1"
@@ -81,6 +83,8 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
 
   
   <link rel="preload" as="image" href="https://plootra.com/github.svg" />
+  
+  <link rel="preload" as="image" href="https://plootra.com/rss.svg" />
   
 
   
@@ -229,6 +233,13 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
         target="_blank"
       ></a>
       
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href=" https://plootra.com/index.xml "
+        target="_blank"
+      ></a>
+      
     </nav>
     
   </div>
@@ -294,6 +305,35 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
   
 
   
+  
+  <div class="mt-24" id="graphcomment"></div>
+  <script type="text/javascript">
+    var __semio__params = {
+      graphcommentId: 'plootra',
+      behaviour: {
+        
+      },
+      
+    };
+
+    function __semio__onload() {
+      __semio__gc_graphlogin(__semio__params);
+    }
+
+    (function () {
+      var gc = document.createElement('script');
+      gc.type = 'text/javascript';
+      gc.async = true;
+      gc.onload = __semio__onload;
+      gc.defer = true;
+      gc.src =
+        'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(gc);
+    })();
+  </script>
   
 </article>
 
