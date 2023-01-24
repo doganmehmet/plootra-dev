@@ -10,4 +10,4 @@ title: Contact
 ---
 
 - [github.com/doganmehmet](https://github.com/doganmehmet)
-- [E-mail](plootra@outlook.com)
+- [E-mail](mailto:plootra@outlook.com)
