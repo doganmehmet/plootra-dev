@@ -7,7 +7,7 @@ DefaultContentLanguage: en
 enableInlineShortcodes: yes
 ignoreErrors: error-remote-getjson
 theme: "hugo-paper"
-title: Plootra
+title: "Plootra: your guide to analytics for financial markets and investing"
 # disqusShortname: xxxxx # to enable Disqus in the website
 googleAnalytics: G-2MNSX43ZM3
 
@@ -23,7 +23,7 @@ params:
   # instagram: n/a
   # name: Mehmet
   # twitter: n/a
-  description:  Your guide to anlytics for financial markets and investing
+  description: Plootra is your guide to analytics for financial markets and investing with R and Python. Both languages are extensively used by invesment professionals in banks, investment funds, and asset management firms.
   rss: true
   graphCommentId: plootra
   showReadingTime: true
