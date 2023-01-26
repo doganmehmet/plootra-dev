@@ -7,13 +7,14 @@ DefaultContentLanguage: en
 enableInlineShortcodes: yes
 ignoreErrors: error-remote-getjson
 theme: "hugo-paper"
-title: "Plootra: your guide to analytics for financial markets and investing"
+title: Plootra | Analytics for financial markets and investing
 # disqusShortname: xxxxx # to enable Disqus in the website
 googleAnalytics: G-2MNSX43ZM3
+header: Plootrax
 
 
 permalinks:
-  posts: /:year/:month/:slug/ #originally it was /:year/:month/:title/
+  posts: /:year/:month/:slug/ # originally it was /:year/:month/:title/
 
 params:
   # avatar: nanxiaobei@gmail.com
@@ -27,7 +28,6 @@ params:
   rss: true
   graphCommentId: plootra
   showReadingTime: true
-
   
 markup:
   goldmark:
@@ -47,6 +47,8 @@ menu:
       name: Shiny
       url: /shiny/
       weight: 10
+
+      
 taxonomies:
   category: categories
   series: series
