@@ -16,8 +16,10 @@ options(
   # to disable knitting Rmd files on save, set this option to FALSE
   blogdown.knit.on_save = TRUE,
   # build .Rmd to .md; to build to .html (via Pandoc), set this option to 'html'
-  blogdown.method = 'markdown'
+  blogdown.method = 'markdown',
+  # to automatically insert the author name in RStudio blogdown::post addin
+  blogdown.author = "Mehmet Dogan"
 )
 
 # fix Hugo version
-options(blogdown.hugo.version = "0.109.0")
+options(blogdown.hugo.version = "0.110.0")
