@@ -7,6 +7,7 @@ author: Mehmet Dogan
 date: "2023-01-09"
 description: Plootra, made with the "blogdown" package in R
 title: About
+comments: false
 ---
 
 Hi there, 
