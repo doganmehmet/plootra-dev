@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2023</copyright>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://plootra.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://plootra.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Embeding shiny into a blogdown post</title>
+      <link>https://plootra.com/post/embeding-shiny-into-a-blogdown-post/</link>
+      <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://plootra.com/post/embeding-shiny-into-a-blogdown-post/</guid>
+      <description>In this post I will walk you through how I embedded a shiny application into this post. This website generated using blogdown package. By embedding an interactive shiny app into a post allows users to interact page and also make the concept easier to understand for them.
+I tried to answer to to:
+Is it possible to embed a shiny application into a post? If yes, is it possible make it responsive?</description>
+    </item>
+    
     <item>
       <title>Hello R Markdown</title>
       <link>https://plootra.com/post/2020-12-01-r-rmarkdown/</link>

@@ -3,11 +3,13 @@ title: Embeding shiny into a blogdown post
 author: Mehmet Dogan
 date: '2023-01-27'
 slug: Embeding-shiny-into-a-blogdown-post
-categories: []
-tags: []
+categories: ["R"]
+tags: ["shiny", "blogdown", "R"]
 ---
 
-In this post I tried to embed a shiny application into the post. I tried to answer to:
+In this post I will walk you through how I embedded a shiny application into this post. This website generated using blogdown package. By embedding an interactive shiny app into a post allows users to interact page and also make the concept easier to understand for them.
+
+I tried to answer to to:
 1. Is it possible to embed a shiny application into a post?
 2. If yes, is it possible make it responsive?
 3. If yes again, what is the easiest way to make it?
@@ -19,20 +21,21 @@ I found that this is possible using iframe
 ### Is it possible make it responsive
 Yes, that is possible using css
 
-I followed the following tutorial to to make it responsive:
-https://www.w3schools.com/howto/howto_css_responsive_iframes.asp
+I followed [this tutorial](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp) to make it responsive suing css.
+
 
 
 ### What is the easiest way to make it
-This was the most pleasant one. Hugo definitely makes our life very easy here. All I had to do is to create a shortcode, e.g., shinyapps.html, under layout/shortcodes folder, place my css code there together with iframe and call it in this document.
+Hugo definitely makes our life very easy here. All I had to do is to create a shortcode, e.g., shinyapps.html, under layout/shortcodes folder, place my css code there together with iframe and call it in this document.
 
 
 
 {{< shinyiframeresponsive "https://plootra.com/shiny/apps/hello/">}}
 
-You can find the steps below to create your own custom shortcode and reuse it in your posts.
+You can follow the two-step instructions to to create your own custom shortcode and reuse it in your posts.
 
-In shinyapp.html file
+
+1. Create shinyapp.html file under layout/shortcodes direcotry
 
 ```css
 <style>
@@ -40,10 +43,13 @@ In shinyapp.html file
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  padding-top: 56.25%; /* 16:9 Aspect Ratio
+  (divide 9 by 16 = 0.5625) you can use other
+  aspect ratios as well*/
 }
 
-/* Then style the iframe to fit in the container div with full height and width */
+/* Then style the iframe to fit in the container
+div with full height and width */
 .responsive-iframe {
   position: absolute;
   top: 0;
@@ -57,21 +63,20 @@ In shinyapp.html file
 
 
 <div class="container"> 
-  <iframe class="responsive-iframe" frameborder="no" src={{ .Get 0 }}></iframe>
+  <iframe class="responsive-iframe" 
+  frameborder="no" src={{ .Get 0 }}></iframe>
 </div>
 ```
 
-In this post (a markdown file) you place the short code as described in documentation or video below.
+2. Place the shortcode, shinyapp, created in step 1 to markdown file (basically your post).
 
 
 
-
-
-You can find the related hugo documentation for customer shortcodes by visiting:
+This is the hugo documentation for custom shortcodes
 https://gohugo.io/templates/shortcode-templates/
 
 
-Also you can watch a very useful tutorial:
+Also you can watch this tutorial. It gives a very good introduction to custom shortcodes in Hugo. 
 {{< youtube Eu4zSaKOY4A >}}
 
 

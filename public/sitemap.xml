@@ -5,13 +5,31 @@
     <loc>https://plootra.com/</loc>
     <lastmod>2023-01-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://plootra.com/tags/blogdown/</loc>
+    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/categories/</loc>
+    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://plootra.com/post/embeding-shiny-into-a-blogdown-post/</loc>
     <lastmod>2023-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/post/</loc>
     <lastmod>2023-01-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://plootra.com/tags/r/</loc>
+    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/categories/r/</loc>
+    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://plootra.com/research/</loc>
+    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/tags/shiny/</loc>
+    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/tags/</loc>
     <lastmod>2023-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/research/test-under-research-without-type/</loc>
@@ -23,25 +41,16 @@
     <loc>https://plootra.com/2023/01/contact/</loc>
     <lastmod>2023-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://plootra.com/categories/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
     <loc>https://plootra.com/post/2020-12-01-r-rmarkdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://plootra.com/tags/plot/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://plootra.com/categories/r/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
     <loc>https://plootra.com/tags/r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://plootra.com/tags/regression/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://plootra.com/tags/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://plootra.com/2019/05/</loc>

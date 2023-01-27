@@ -14,9 +14,9 @@
       <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://plootra.com/post/embeding-shiny-into-a-blogdown-post/</guid>
-      <description>In this post I tried to embed a shiny application into the post. I tried to answer to:
-Is it possible to embed a shiny application into a post? If yes, is it possible make it responsive? If yes again, what is the easiest way to make it? Is it possible to embed a shiny application into a post I found that this is possible using iframe
-Is it possible make it responsive Yes, that is possible using css</description>
+      <description>In this post I will walk you through how I embedded a shiny application into this post. This website generated using blogdown package. By embedding an interactive shiny app into a post allows users to interact page and also make the concept easier to understand for them.
+I tried to answer to to:
+Is it possible to embed a shiny application into a post? If yes, is it possible make it responsive?</description>
     </item>
     
     <item>
