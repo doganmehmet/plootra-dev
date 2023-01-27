@@ -1,8 +1,8 @@
 ---
-title: Testing Shiny with simple markdown document
+title: Embeding shiny into a blogdown post
 author: Mehmet Dogan
 date: '2023-01-27'
-slug: testing-shiny-with-simple-markdown-document
+slug: Embeding-shiny-into-a-blogdown-post
 categories: []
 tags: []
 ---
@@ -34,7 +34,7 @@ You can find the steps below to create your own custom shortcode and reuse it in
 
 In shinyapp.html file
 
-```
+```css
 <style>
 .container {
   position: relative;

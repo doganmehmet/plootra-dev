@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="en"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Embeding shiny into a blogdown post - Plootra | Analytics for financial markets and investing</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="In this post I tried to embed a shiny application into the post. I tried to answer to:
+Is it possible to embed a shiny application into a post? If yes, is it possible make it responsive? If yes again, what is the easiest way to make it? Is it possible to embed a shiny application into a post I found that this is possible using iframe
+Is it possible make it responsive Yes, that is possible using css" />
+  <meta
+    name="author"
+    content="Mehmet Dogan"
+  />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://plootra.com/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://plootra.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="https://plootra.com/theme.png" />
+
+  
+  
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://plootra.com/github.svg" />
+  
+  <link rel="preload" as="image" href="https://plootra.com/rss.svg" />
+  
+
+  
+  <link rel="icon" href="https://plootra.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://plootra.com/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  
+
+  
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-2MNSX43ZM3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2MNSX43ZM3"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-2MNSX43ZM3', { 'anonymize_ip': false });
+}
+</script>
+
+  
+  
+  
+  <meta property="og:title" content="Embeding shiny into a blogdown post" />
+<meta property="og:description" content="In this post I tried to embed a shiny application into the post. I tried to answer to:
+Is it possible to embed a shiny application into a post? If yes, is it possible make it responsive? If yes again, what is the easiest way to make it? Is it possible to embed a shiny application into a post I found that this is possible using iframe
+Is it possible make it responsive Yes, that is possible using css" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://plootra.com/post/embeding-shiny-into-a-blogdown-post/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-01-27T00:00:00+00:00" />
+
+
+  
+  <meta itemprop="name" content="Embeding shiny into a blogdown post">
+<meta itemprop="description" content="In this post I tried to embed a shiny application into the post. I tried to answer to:
+Is it possible to embed a shiny application into a post? If yes, is it possible make it responsive? If yes again, what is the easiest way to make it? Is it possible to embed a shiny application into a post I found that this is possible using iframe
+Is it possible make it responsive Yes, that is possible using css"><meta itemprop="datePublished" content="2023-01-27T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-01-27T00:00:00+00:00" />
+<meta itemprop="wordCount" content="269">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Embeding shiny into a blogdown post"/>
+<meta name="twitter:description" content="In this post I tried to embed a shiny application into the post. I tried to answer to:
+Is it possible to embed a shiny application into a post? If yes, is it possible make it responsive? If yes again, what is the easiest way to make it? Is it possible to embed a shiny application into a post I found that this is possible using iframe
+Is it possible make it responsive Yes, that is possible using css"/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href="https://plootra.com/"
+      >Plootra</a>
+    
+    
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >Contact</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/shiny/"
+        >Shiny</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/doganmehmet "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href=" https://plootra.com/index.xml "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">Embeding shiny into a blogdown post</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Jan 27, 2023</time>
+      
+      
+      <span class="mx-1">&middot;</span>
+      <span>Mehmet Dogan</span>
+      
+      
+      
+      
+      <span class="mx-1">&middot;</span>
+      <span>2 min read</span>
+      
+  
+      
+    </div>
+    
+  </header>
+
+  <section><p>In this post I tried to embed a shiny application into the post. I tried to answer to:</p>
+<ol>
+<li>Is it possible to embed a shiny application into a post?</li>
+<li>If yes, is it possible make it responsive?</li>
+<li>If yes again, what is the easiest way to make it?</li>
+</ol>
+<h3 id="is-it-possible-to-embed-a-shiny-application-into-a-post">Is it possible to embed a shiny application into a post</h3>
+<p>I found that this is possible using iframe</p>
+<h3 id="is-it-possible-make-it-responsive">Is it possible make it responsive</h3>
+<p>Yes, that is possible using css</p>
+<p>I followed the following tutorial to to make it responsive:
+<a href="https://www.w3schools.com/howto/howto_css_responsive_iframes.asp">https://www.w3schools.com/howto/howto_css_responsive_iframes.asp</a></p>
+<h3 id="what-is-the-easiest-way-to-make-it">What is the easiest way to make it</h3>
+<p>This was the most pleasant one. Hugo definitely makes our life very easy here. All I had to do is to create a shortcode, e.g., shinyapps.html, under layout/shortcodes folder, place my css code there together with iframe and call it in this document.</p>
+<style>
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;  
+}
+
+ 
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+
+<div class="container"> 
+  <iframe class="responsive-iframe" frameborder="no" src=https://plootra.com/shiny/apps/hello/></iframe>
+</div>
+<p>You can find the steps below to create your own custom shortcode and reuse it in your posts.</p>
+<p>In shinyapp.html file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">container</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">overflow</span>: <span style="color:#66d9ef">hidden</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding-top</span>: <span style="color:#ae81ff">56.25</span><span style="color:#66d9ef">%</span>; <span style="color:#75715e">/* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Then style the iframe to fit in the container div with full height and width */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">responsive-iframe</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">div</span> <span style="color:#f92672">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span><span style="color:#f92672">&gt;</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#f92672">iframe</span> <span style="color:#f92672">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;responsive-iframe&#34;</span> <span style="color:#f92672">frameborder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;no&#34;</span> <span style="color:#f92672">src</span><span style="color:#f92672">=</span>{<span style="color:#960050;background-color:#1e0010">{</span> <span style="color:#960050;background-color:#1e0010">.Get</span> <span style="color:#960050;background-color:#1e0010">0</span> }<span style="color:#960050;background-color:#1e0010">}</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#f92672">iframe</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#f92672">div</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><p>In this post (a markdown file) you place the short code as described in documentation or video below.</p>
+<p>You can find the related hugo documentation for customer shortcodes by visiting:
+<a href="https://gohugo.io/templates/shortcode-templates/">https://gohugo.io/templates/shortcode-templates/</a></p>
+<p>Also you can watch a very useful tutorial:
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/Eu4zSaKOY4A" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
+</section>
+
+  
+  
+
+  
+  
+  
+  <nav
+    class="mt-24 flex rounded-lg bg-black/[3%] p-1.5 text-lg dark:bg-white/[8%]"
+  >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-md p-6 pl-3 no-underline hover:bg-black/[2%]"
+      href="https://plootra.com/post/2020-12-01-r-rmarkdown/"
+      ><span>Hello R Markdown</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+
+  
+  
+  <div class="mt-24" id="graphcomment"></div>
+  <script type="text/javascript">
+    var __semio__params = {
+      graphcommentId: 'plootra',
+      behaviour: {
+        
+      },
+      
+    };
+
+    function __semio__onload() {
+      __semio__gc_graphlogin(__semio__params);
+    }
+
+    (function () {
+      var gc = document.createElement('script');
+      gc.type = 'text/javascript';
+      gc.async = true;
+      gc.onload = __semio__onload;
+      gc.defer = true;
+      gc.src =
+        'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(gc);
+    })();
+  </script>
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://plootra.com/">Plootra</a> 
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>
