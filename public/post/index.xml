@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2023</copyright>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://plootra.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://plootra.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing Shiny with simple markdown document</title>
+      <link>https://plootra.com/post/testing-shiny-with-simple-markdown-document/</link>
+      <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://plootra.com/post/testing-shiny-with-simple-markdown-document/</guid>
+      <description>In this post I tried to embed a shiny application into the post. I tried to answer to:
+Is it possible to embed a shiny application into a post? If yes, is it possible make it responsive? If yes again, what is the easiest way to make it? Is it possible to embed a shiny application into a post I found that this is possible using iframe
+Is it possible make it responsive Yes, that is possible using css</description>
+    </item>
+    
     <item>
       <title>Hello R Markdown</title>
       <link>https://plootra.com/post/2020-12-01-r-rmarkdown/</link>

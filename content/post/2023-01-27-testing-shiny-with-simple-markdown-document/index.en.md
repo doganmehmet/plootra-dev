@@ -5,7 +5,6 @@ date: '2023-01-27'
 slug: testing-shiny-with-simple-markdown-document
 categories: []
 tags: []
-draft: true
 ---
 
 In this post I tried to embed a shiny application into the post. I tried to answer to:

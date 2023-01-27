@@ -5,10 +5,16 @@
     <loc>https://plootra.com/</loc>
     <lastmod>2023-01-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://plootra.com/post/</loc>
+    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://plootra.com/research/</loc>
     <lastmod>2023-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/research/test-under-research-without-type/</loc>
+    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/post/testing-shiny-with-simple-markdown-document/</loc>
     <lastmod>2023-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/2023/01/about/</loc>
@@ -24,9 +30,6 @@
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://plootra.com/tags/plot/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://plootra.com/post/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://plootra.com/categories/r/</loc>
