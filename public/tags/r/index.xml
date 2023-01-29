@@ -9,14 +9,13 @@
     <copyright>Copyright © 2023</copyright>
     <lastBuildDate>Fri, 27 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://plootra.com/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Embeding shiny into a blogdown post</title>
+      <title>How to Embed Shiny Apps Into a blogdown Post</title>
       <link>https://plootra.com/post/embeding-shiny-into-a-blogdown-post/</link>
       <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://plootra.com/post/embeding-shiny-into-a-blogdown-post/</guid>
-      <description>In this post I will walk you through how I embedded a shiny application into this post. This website generated using blogdown package. By embedding an interactive shiny app into a post allows users to interact page and also make the concept easier to understand for them.
-I tried to answer to to:
-Is it possible to embed a shiny application into a post? If yes, is it possible make it responsive?</description>
+      <description>If you have a website or blog and you&amp;rsquo;d like to embed a shiny app into your content, I will walk you through the steps to achieve it:
+How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your points.</description>
     </item>
     
   </channel>
