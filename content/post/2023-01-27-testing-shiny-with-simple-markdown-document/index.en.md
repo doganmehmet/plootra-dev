@@ -7,14 +7,14 @@ categories: ["R"]
 tags: ["shiny", "blogdown", "R"]
 ---
 
-If you have a website or blog and you'd like to embed a shiny app into your content, I will walk you through the steps to achieve it: 
+If you have a website or blog and would like to embed a shiny app into your content, I will walk you through three alternatives to achieve it in this article.
 
 1. How to embed a shiny app into a blogdown post?
 2. How to make it responsive?
-3. How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only)
+3. How can we create a custom [Hugo](https://gohugo.io/) shortcode and reuse it in future content? (for Hugo sites only)
 
 
-Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your points.
+Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your message easier.
 
 {{< shinyiframeresponsive "https://plootra.com/shiny/apps/hello/">}}
 
@@ -28,9 +28,9 @@ You can insert the following HTML code into your post. It will place the shiny a
 <iframe height="100%" width="100%" frameborder="no" src="url-to-shiny-app"> </iframe>
 ```
 
-"URL-to-shiny-app" should be the entire path to the app. It must start with http or https. It can be your app deployed in some server or can be someone else's app.
+"URL-to-shiny-app" should be the entire path to the app. It must start with http or https. It can be your app deployed in some server or someone else's app.
 
-You can modify the height, width, and frameborder attributes to change the app's look.
+You can modify the ***height***, ***width***, and ***frameborder*** attributes to change the app's look.
 
 You can embed a shiny app and other elements, such as external ads, videos, or other interactive components, into the page using an iframe tag.
 
@@ -40,11 +40,10 @@ One problem with this solution is that the embedded app may look awkward if your
 
 ### How to make it responsive?
 
-Using CSS code, you can make your shiny app responsive.
+Using CSS code, you can make the embedded app responsive. Check out [this tutorial](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp) to understand how the underlying CSS works.
 
-I used the below CSS to make the shiny app responsive. [This tutorial](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp) helped me understand how to make an *iframe* responsive using CSS.
 
-Place CSS code and iframe tag into the body of the post, and it will be responsive.
+Place **CSS code** and **iframe tag** into the body of the post, and it will make the app responsive. You can manipulate the **aspect ratio** depending on your needs by editing the **padding-top** argument.
 
 ```css
 <style>
@@ -80,7 +79,7 @@ div with full height and width */
 
 ### How can we make a custom Hugo shortcode and reuse it in future content? (for Hugo sites only)
 
-Here comes the power of Hugo! It makes our life easier. If you are already using Hugo and unfamiliar with the shortcodes, please visit the below Hugo documentation and tutorial.
+Here comes the power of Hugo! It makes our life easier. If you are already using Hugo and unfamiliar with the **shortcodes**, visit the below [Hugo](https://gohugo.io/) documentation and tutorial to learn about it.
 
 
 The Hugo documentation for custom shortcodes: https://gohugo.io/templates/shortcode-templates/
@@ -89,16 +88,18 @@ By the way, I embedded this video also using Hugo's shortcode :smile:
 {{< youtube Eu4zSaKOY4A >}}
 
 
-The benefit of this solution is you can reuse it in your future content. You can accomplish it in a two-step process.
+The benefit of this solution is you can reuse it in your future content. All you have to do is to use the same shortcode and pass a URL to a shiny app. 
 
-1. Make a shortcode
+In a two-step process explained below, you can create a custom shortcode and embed the shiny app into your article. If you 
+
+1. Make a custom shortcode
 
 Create an HTML file, e.g., shinyapps.html, under the /layout/shortcodes directory. Then you need to put the **CSS code** and **iframe tag** into the shinyapps.html file.
 
-![Hugo layout folder](C:/Users/ploot/OneDrive/R/plootra/static/hugo_layout_folder.png)
+![Hugo layout folder](/img/hugo_layout_folder.PNG)
 
 
-The content of the shinyapps.html
+The content of the **shinyapps.html**
 ```css
 <style>
 .container {
@@ -132,8 +133,13 @@ div with full height and width */
 
 You will use the filename before html extension as a shortcode name. 
 
-2. Use the following syntax to place the shortcode into the markdown file (your post).
+2. Place the shortcode into the markdown file (your post).
 
-![shinyapp shortcode](C:/Users/ploot/OneDrive/R/plootra/static/shinyapps.png)
+![shinyapp shortcode](/img/shinyapp.PNG)
 
 
+### Conclusion
+
+Having a shiny app and embedding it into your articles is an excellent idea if you want your readers to interact more with your content. In this article, I demonstrated three ways to place a shiny app into your posts. You can choose the one that works best for you. If you do not care about how it looks on different screens, go ahead with the first solution. You can go with the second solution if you want to adjust your app's look on different screen sizes and you are not using a Hugo website.
+
+If you are using Hugo, the best way to embed a shiny app is to create a shortcode and then place the shortcode into your articles and reuse the shortcode in your future content by just passing an URL.

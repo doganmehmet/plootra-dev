@@ -14,8 +14,8 @@
       <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://plootra.com/post/embeding-shiny-into-a-blogdown-post/</guid>
-      <description>If you have a website or blog and you&amp;rsquo;d like to embed a shiny app into your content, I will walk you through the steps to achieve it:
-How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your points.</description>
+      <description>If you have a website or blog and would like to embed a shiny app into your content, I will walk you through three alternatives to achieve it in this article.
+How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your message easier.</description>
     </item>
     
   </channel>

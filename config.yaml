@@ -12,11 +12,9 @@ title: Plootra | Analytics for financial markets and investing
 googleAnalytics: G-2MNSX43ZM3
 enableEmoji: true
 
-
 permalinks:
   /: /:year/:month/:slug/
   # post: /:year/:month/:slug/ # originally it was /:year/:month/:title/
-  
   
 params:
   # avatar: nanxiaobei@gmail.com

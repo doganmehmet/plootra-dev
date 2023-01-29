@@ -48,8 +48,8 @@
   
   <meta name="theme-color" />
   
-  <meta name="description" content="If you have a website or blog and you&rsquo;d like to embed a shiny app into your content, I will walk you through the steps to achieve it:
-How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your points." />
+  <meta name="description" content="If you have a website or blog and would like to embed a shiny app into your content, I will walk you through three alternatives to achieve it in this article.
+How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your message easier." />
   <meta
     name="author"
     content="Mehmet Dogan"
@@ -129,8 +129,8 @@ if (!doNotTrack) {
   
   
   <meta property="og:title" content="How to Embed Shiny Apps Into a blogdown Post" />
-<meta property="og:description" content="If you have a website or blog and you&rsquo;d like to embed a shiny app into your content, I will walk you through the steps to achieve it:
-How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your points." />
+<meta property="og:description" content="If you have a website or blog and would like to embed a shiny app into your content, I will walk you through three alternatives to achieve it in this article.
+How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your message easier." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://plootra.com/post/embeding-shiny-into-a-blogdown-post/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-01-27T00:00:00+00:00" />
@@ -139,16 +139,16 @@ How to embed a shiny app into a blogdown post? How to make it responsive? How ca
 
   
   <meta itemprop="name" content="How to Embed Shiny Apps Into a blogdown Post">
-<meta itemprop="description" content="If you have a website or blog and you&rsquo;d like to embed a shiny app into your content, I will walk you through the steps to achieve it:
-How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your points."><meta itemprop="datePublished" content="2023-01-27T00:00:00+00:00" />
+<meta itemprop="description" content="If you have a website or blog and would like to embed a shiny app into your content, I will walk you through three alternatives to achieve it in this article.
+How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your message easier."><meta itemprop="datePublished" content="2023-01-27T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-01-27T00:00:00+00:00" />
-<meta itemprop="wordCount" content="616">
+<meta itemprop="wordCount" content="789">
 <meta itemprop="keywords" content="shiny,blogdown,R," />
   
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Embed Shiny Apps Into a blogdown Post"/>
-<meta name="twitter:description" content="If you have a website or blog and you&rsquo;d like to embed a shiny app into your content, I will walk you through the steps to achieve it:
-How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your points."/>
+<meta name="twitter:description" content="If you have a website or blog and would like to embed a shiny app into your content, I will walk you through three alternatives to achieve it in this article.
+How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your message easier."/>
 
   
   
@@ -291,7 +291,7 @@ How to embed a shiny app into a blogdown post? How to make it responsive? How ca
       
       
       <span class="mx-1">&middot;</span>
-      <span>3 min read</span>
+      <span>4 min read</span>
       
   
       
@@ -299,13 +299,13 @@ How to embed a shiny app into a blogdown post? How to make it responsive? How ca
     
   </header>
 
-  <section><p>If you have a website or blog and you&rsquo;d like to embed a shiny app into your content, I will walk you through the steps to achieve it:</p>
+  <section><p>If you have a website or blog and would like to embed a shiny app into your content, I will walk you through three alternatives to achieve it in this article.</p>
 <ol>
 <li>How to embed a shiny app into a blogdown post?</li>
 <li>How to make it responsive?</li>
-<li>How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only)</li>
+<li>How can we create a custom <a href="https://gohugo.io/">Hugo</a> shortcode and reuse it in future content? (for Hugo sites only)</li>
 </ol>
-<p>Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your points.</p>
+<p>Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your message easier.</p>
 <style>
 .container {
   position: relative;
@@ -335,14 +335,13 @@ How to embed a shiny app into a blogdown post? How to make it responsive? How ca
 <p>It&rsquo;s possible to embed it using an <em><strong>iframe</strong></em> tag. An iframe, also known as Inline Frame, is an element that loads another HTML element inside of a webpage. In our case, another HTML element is the shiny app.</p>
 <p>You can insert the following HTML code into your post. It will place the shiny app on your blog post when you publish it.</p>
 <pre tabindex="0"><code>&lt;iframe height=&#34;100%&#34; width=&#34;100%&#34; frameborder=&#34;no&#34; src=&#34;url-to-shiny-app&#34;&gt; &lt;/iframe&gt;
-</code></pre><p>&ldquo;URL-to-shiny-app&rdquo; should be the entire path to the app. It must start with http or https. It can be your app deployed in some server or can be someone else&rsquo;s app.</p>
-<p>You can modify the height, width, and frameborder attributes to change the app&rsquo;s look.</p>
+</code></pre><p>&ldquo;URL-to-shiny-app&rdquo; should be the entire path to the app. It must start with http or https. It can be your app deployed in some server or someone else&rsquo;s app.</p>
+<p>You can modify the <em><strong>height</strong></em>, <em><strong>width</strong></em>, and <em><strong>frameborder</strong></em> attributes to change the app&rsquo;s look.</p>
 <p>You can embed a shiny app and other elements, such as external ads, videos, or other interactive components, into the page using an iframe tag.</p>
 <p>One problem with this solution is that the embedded app may look awkward if your readers visit your site from their mobile phones. So let&rsquo;s move to the next section to determine how we can make it responsive.</p>
 <h3 id="how-to-make-it-responsive">How to make it responsive?</h3>
-<p>Using CSS code, you can make your shiny app responsive.</p>
-<p>I used the below CSS to make the shiny app responsive. <a href="https://www.w3schools.com/howto/howto_css_responsive_iframes.asp">This tutorial</a> helped me understand how to make an <em>iframe</em> responsive using CSS.</p>
-<p>Place CSS code and iframe tag into the body of the post, and it will be responsive.</p>
+<p>Using CSS code, you can make the embedded app responsive. Check out <a href="https://www.w3schools.com/howto/howto_css_responsive_iframes.asp">this tutorial</a> to understand how the underlying CSS works.</p>
+<p>Place <strong>CSS code</strong> and <strong>iframe tag</strong> into the body of the post, and it will make the app responsive. You can manipulate the <strong>aspect ratio</strong> depending on your needs by editing the <strong>padding-top</strong> argument.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">container</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
@@ -371,7 +370,7 @@ How to embed a shiny app into a blogdown post? How to make it responsive? How ca
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#f92672">iframe</span> <span style="color:#f92672">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;responsive-iframe&#34;</span> <span style="color:#f92672">frameborder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;no&#34;</span> <span style="color:#f92672">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;URL-to-shiny-app&#34;</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#f92672">iframe</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#f92672">div</span><span style="color:#f92672">&gt;</span>
 </span></span></code></pre></div><h3 id="how-can-we-make-a-custom-hugo-shortcode-and-reuse-it-in-future-content-for-hugo-sites-only">How can we make a custom Hugo shortcode and reuse it in future content? (for Hugo sites only)</h3>
-<p>Here comes the power of Hugo! It makes our life easier. If you are already using Hugo and unfamiliar with the shortcodes, please visit the below Hugo documentation and tutorial.</p>
+<p>Here comes the power of Hugo! It makes our life easier. If you are already using Hugo and unfamiliar with the <strong>shortcodes</strong>, visit the below <a href="https://gohugo.io/">Hugo</a> documentation and tutorial to learn about it.</p>
 <p>The Hugo documentation for custom shortcodes: <a href="https://gohugo.io/templates/shortcode-templates/">https://gohugo.io/templates/shortcode-templates/</a></p>
 <p>By the way, I embedded this video also using Hugo&rsquo;s shortcode 😄
 
@@ -379,13 +378,14 @@ How to embed a shiny app into a blogdown post? How to make it responsive? How ca
   <iframe src="https://www.youtube-nocookie.com/embed/Eu4zSaKOY4A" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 </p>
-<p>The benefit of this solution is you can reuse it in your future content. You can accomplish it in a two-step process.</p>
+<p>The benefit of this solution is you can reuse it in your future content. All you have to do is to use the same shortcode and pass a URL to a shiny app.</p>
+<p>In a two-step process explained below, you can create a custom shortcode and embed the shiny app into your article. If you</p>
 <ol>
-<li>Make a shortcode</li>
+<li>Make a custom shortcode</li>
 </ol>
 <p>Create an HTML file, e.g., shinyapps.html, under the /layout/shortcodes directory. Then you need to put the <strong>CSS code</strong> and <strong>iframe tag</strong> into the shinyapps.html file.</p>
-<p><img src="C:/Users/ploot/OneDrive/R/plootra/static/hugo_layout_folder.png" alt="Hugo layout folder"></p>
-<p>The content of the shinyapps.html</p>
+<p><img src="/img/hugo_layout_folder.PNG" alt="Hugo layout folder"></p>
+<p>The content of the <strong>shinyapps.html</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">container</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
@@ -415,9 +415,12 @@ How to embed a shiny app into a blogdown post? How to make it responsive? How ca
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#f92672">div</span><span style="color:#f92672">&gt;</span>
 </span></span></code></pre></div><p>You will use the filename before html extension as a shortcode name.</p>
 <ol start="2">
-<li>Use the following syntax to place the shortcode into the markdown file (your post).</li>
+<li>Place the shortcode into the markdown file (your post).</li>
 </ol>
-<p><img src="C:/Users/ploot/OneDrive/R/plootra/static/shinyapps.png" alt="shinyapp shortcode"></p>
+<p><img src="/img/shinyapp.PNG" alt="shinyapp shortcode"></p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Having a shiny app and embedding it into your articles is an excellent idea if you want your readers to interact more with your content. In this article, I demonstrated three ways to place a shiny app into your posts. You can choose the one that works best for you. If you do not care about how it looks on different screens, go ahead with the first solution. You can go with the second solution if you want to adjust your app&rsquo;s look on different screen sizes and you are not using a Hugo website.</p>
+<p>If you are using Hugo, the best way to embed a shiny app is to create a shortcode and then place the shortcode into your articles and reuse the shortcode in your future content by just passing an URL.</p>
 </section>
 
   
