@@ -90,7 +90,7 @@ By the way, I embedded this video also using Hugo's shortcode :smile:
 
 The benefit of this solution is you can reuse it in your future content. All you have to do is to use the same shortcode and pass a URL to a shiny app. 
 
-In a two-step process explained below, you can create a custom shortcode and embed the shiny app into your article. If you 
+In a two-step process explained below, you can create a custom shortcode and embed the shiny app into your article.
 
 1. Make a custom shortcode
 
