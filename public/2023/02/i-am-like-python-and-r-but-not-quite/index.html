@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="en"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>I Am Like Python and R But Not Quite - Plootra | Analytics for financial markets and investing</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="A mini-funny Julia crash course for Python and R users Hello, World! I&rsquo;m Julia. I&rsquo;m like Python and R but I have my personality.
+You can run me online to follow this tutorial if you haven&rsquo;t installed me already.
+Printing I can print everything using print() or println()
+print(): prints on the same line println(): adds a new line to the end of the output println(&#34;Hello, I&#39;m Julia&#34;) ## Hello, I&#39;m Julia println(&#34;I&#39;m like like Python and R, but not quite&#34;) ## I&#39;m like like Python and R, but not quite Package management Installing a package I install new packages using:" />
+  <meta
+    name="author"
+    content="Mehmet Dogan"
+  />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://plootra.com/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://plootra.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="https://plootra.com/theme.png" />
+
+  
+  
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://plootra.com/github.svg" />
+  
+  <link rel="preload" as="image" href="https://plootra.com/rss.svg" />
+  
+
+  
+  <link rel="icon" href="https://plootra.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://plootra.com/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  
+
+  
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-2MNSX43ZM3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2MNSX43ZM3"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-2MNSX43ZM3', { 'anonymize_ip': false });
+}
+</script>
+
+  
+  
+  
+  <meta property="og:title" content="I Am Like Python and R But Not Quite" />
+<meta property="og:description" content="A mini-funny Julia crash course for Python and R users" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://plootra.com/2023/02/i-am-like-python-and-r-but-not-quite/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-01T00:00:00+00:00" />
+
+
+  
+  <meta itemprop="name" content="I Am Like Python and R But Not Quite">
+<meta itemprop="description" content="A mini-funny Julia crash course for Python and R users"><meta itemprop="datePublished" content="2023-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-02-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1712">
+<meta itemprop="keywords" content="R,Python,Julia,Julialang,Data Science," />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="I Am Like Python and R But Not Quite"/>
+<meta name="twitter:description" content="A mini-funny Julia crash course for Python and R users"/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href="https://plootra.com/"
+      >Plootra</a>
+    
+    
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >Contact</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/doganmehmet "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href=" https://plootra.com/index.xml "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">I Am Like Python and R But Not Quite</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Feb 1, 2023</time>
+      
+      
+      <span class="mx-1">&middot;</span>
+      <span>Mehmet Dogan</span>
+      
+      
+      
+      
+      <span class="mx-1">&middot;</span>
+      <span>9 min read</span>
+      
+  
+      
+    </div>
+    
+  </header>
+
+  <section><h2 id="a-mini-funny-julia-crash-course-for-python-and-r-users">A mini-funny Julia crash course for Python and R users</h2>
+<p>Hello, World!
+I&rsquo;m <strong>Julia</strong>. I&rsquo;m like Python and R but I have my personality.</p>
+<p>You can <a href="https://julialang.org/learning/tryjulia/">run me online</a> to follow this tutorial if you haven&rsquo;t installed me already.</p>
+<h2 id="printing">Printing</h2>
+<p>I can print everything using <em><strong>print()</strong></em> or <em><strong>println()</strong></em></p>
+<ul>
+<li><em><strong>print()</strong></em>: prints on the same line</li>
+<li><em><strong>println()</strong></em>: adds a new line to the end of the output</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>println(<span style="color:#e6db74">&#34;Hello, I&#39;m Julia&#34;</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>## Hello, I&#39;m Julia
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>println(<span style="color:#e6db74">&#34;I&#39;m like like Python and R, but not quite&#34;</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>## I&#39;m like like Python and R, but not quite
+</code></pre><h2 id="package-management">Package management</h2>
+<h3 id="installing-a-package">Installing a package</h3>
+<p>I install new packages using:</p>
+<ul>
+<li><em><strong>Pkg.add(&ldquo;package_name&rdquo;)</strong></em></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Pkg
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Pkg.add(&#34;DataFrames&#34;) </span>
+</span></span></code></pre></div><h3 id="adding-a-package-to-current-session">Adding a package to current session</h3>
+<p>I add packages to my current session via <em><strong>using</strong></em> keyword:</p>
+<ul>
+<li><em><strong>using package_name</strong></em></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Plots <span style="color:#75715e"># similar to base R plot, matplotlib in Python</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Gadfly <span style="color:#75715e"># similar to ggplot2, not similar to anything in python - this was never achieved in Python</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> RDatasets <span style="color:#75715e"># equivalent of rdatasets package</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> DataFrames <span style="color:#75715e"># similar to data.frame, data.table and dplyr in R, pandas in Python</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> CSV <span style="color:#75715e"># similar to read.csv, readr in R, pandas in Python</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Statistics <span style="color:#75715e"># similar to base R, base Python</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Dates <span style="color:#75715e"># similar to date in base R and datetime in python</span>
+</span></span></code></pre></div><h2 id="vectors">Vectors</h2>
+<p>I&rsquo;m same as python</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>my_vector <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+</span></span></code></pre></div><pre tabindex="0"><code>## 5-element Vector{Int64}:
+##  1
+##  2
+##  3
+##  4
+##  5
+</code></pre><h2 id="control-flow">Control Flow</h2>
+<h3 id="if-statement">If statement</h3>
+<ul>
+<li>I&rsquo;m like Python but without <strong>:</strong></li>
+<li>like R but w/o ugly <em><strong>{ }s</strong></em></li>
+<li>I must end with <em><strong>end</strong></em></li>
+<li>Unlike Python I don&rsquo;t need <em><strong>indentation</strong></em> but I prefer to have it.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> 
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Print me&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elseif</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># - I have elseif in the middle, just like R</span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Print me instead&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Better to print me&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## Print me
+</code></pre><h3 id="while-loop">While loop</h3>
+<ul>
+<li>I&rsquo;m like Python but without <strong>:</strong></li>
+<li>like R but w/o ugly <em><strong>{ }s</strong></em></li>
+<li>I must end with <em><strong>end</strong></em></li>
+<li>Unlike Python I don&rsquo;t need <em><strong>indentation</strong></em> but I prefer to have it.</li>
+<li>If I want to access a global variable inside of me I set <em><strong>global variable_name</strong></em>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">global</span> x
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Print me </span><span style="color:#e6db74">$x</span><span style="color:#e6db74">&#34;</span>) 
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> 
+</span></span></code></pre></div><pre tabindex="0"><code>## Print me 5
+## Print me 4
+## Print me 3
+## Print me 2
+## Print me 1
+</code></pre><h3 id="for-loop">For loop</h3>
+<ul>
+<li>I&rsquo;m like Python but without <strong>:</strong></li>
+<li>like R but w/o ugly <em><strong>{ }s</strong></em></li>
+<li>I must end with <em><strong>end</strong></em></li>
+<li>Unlike Python I don&rsquo;t need <em><strong>indentation</strong></em> but I prefer to have it.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span> 
+</span></span><span style="display:flex;"><span>    print(i, <span style="color:#e6db74">&#34;,&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 1,2,3,4,5,6,7,8,9,10,
+</code></pre><h2 id="functions">Functions</h2>
+<ul>
+<li>I&rsquo;m like R but w/o ugly <em><strong>{ }s</strong></em></li>
+<li>I must end with <em><strong>end</strong></em></li>
+<li>Unlike Python I don&rsquo;t need <em><strong>indentation</strong></em> but I prefer to have it.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> square_number(y)  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> y<span style="color:#f92672">^</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## square_number (generic function with 1 method)
+</code></pre><h3 id="calling-a-function">Calling a function</h3>
+<p>I&rsquo;m just like R and Python</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>square_number(<span style="color:#ae81ff">10</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>## 100
+</code></pre><h3 id="im-awesome">I&rsquo;m Awesome!</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>square_number<span style="color:#f92672">.</span>([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]) <span style="color:#75715e"># it will square each number in the vector</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 5-element Vector{Int64}:
+##   1
+##   4
+##   9
+##  16
+##  25
+</code></pre><h2 id="dataframes">DataFrames</h2>
+<p>I&rsquo;m like R and a bit of Python</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>df <span style="color:#f92672">=</span> DataFrame(Stock<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;B&#34;</span>, <span style="color:#e6db74">&#34;C&#34;</span>, <span style="color:#e6db74">&#34;D&#34;</span>], Price<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>## 4×2 DataFrame
+##  Row │ Stock   Price
+##      │ String  Int64
+## ─────┼───────────────
+##    1 │ A           1
+##    2 │ B           2
+##    3 │ C           3
+##    4 │ D           4
+</code></pre><h3 id="slicing-dataframes">Slicing DataFrames</h3>
+<p>I&rsquo;m like R and Python but not quite.</p>
+<ul>
+<li>I don&rsquo;t need annoying <strong>loc</strong> and <strong>iloc</strong></li>
+<li>I don&rsquo;t complain about copying.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>Stock <span style="color:#75715e"># all elements of Stock column</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 4-element Vector{String}:
+##  &#34;A&#34;
+##  &#34;B&#34;
+##  &#34;C&#34;
+##  &#34;D&#34;
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>df[<span style="color:#f92672">:</span>, <span style="color:#e6db74">&#34;Stock&#34;</span>] <span style="color:#75715e"># all rows of Stock column</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 4-element Vector{String}:
+##  &#34;A&#34;
+##  &#34;B&#34;
+##  &#34;C&#34;
+##  &#34;D&#34;
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>df[<span style="color:#f92672">:</span>, <span style="color:#ae81ff">2</span>] <span style="color:#75715e"># all rows of Price column</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 4-element Vector{Int64}:
+##  1
+##  2
+##  3
+##  4
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>df[<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>, <span style="color:#f92672">:</span>] <span style="color:#75715e"># first 3 rows of each column</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 3×2 DataFrame
+##  Row │ Stock   Price
+##      │ String  Int64
+## ─────┼───────────────
+##    1 │ A           1
+##    2 │ B           2
+##    3 │ C           3
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>df[[<span style="color:#66d9ef">begin</span>, <span style="color:#66d9ef">end</span>], <span style="color:#e6db74">&#34;Price&#34;</span>] <span style="color:#75715e"># first and the last rows of Price column </span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 2-element Vector{Int64}:
+##  1
+##  4
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>df[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>], <span style="color:#ae81ff">2</span>] <span style="color:#75715e"># the first and the third rows of Price (2nd) column</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 2-element Vector{Int64}:
+##  1
+##  3
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#75715e"># Another DataFrame</span>
+</span></span><span style="display:flex;"><span>stockPrices <span style="color:#f92672">=</span> DataFrame(
+</span></span><span style="display:flex;"><span>    Date <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;2022-01-31&#34;</span>,<span style="color:#e6db74">&#34;2022-02-28&#34;</span>,<span style="color:#e6db74">&#34;2022-03-31&#34;</span>,<span style="color:#e6db74">&#34;2022-04-30&#34;</span>,<span style="color:#e6db74">&#34;2022-05-31&#34;</span>,<span style="color:#e6db74">&#34;2022-06-30&#34;</span>,<span style="color:#e6db74">&#34;2022-07-31&#34;</span>,<span style="color:#e6db74">&#34;2022-08-31&#34;</span>,<span style="color:#e6db74">&#34;2022-09-30&#34;</span>,<span style="color:#e6db74">&#34;2022-10-31&#34;</span>,<span style="color:#e6db74">&#34;2022-11-30&#34;</span>,<span style="color:#e6db74">&#34;2022-12-31&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;2022-01-31&#34;</span>,<span style="color:#e6db74">&#34;2022-02-28&#34;</span>,<span style="color:#e6db74">&#34;2022-03-31&#34;</span>,<span style="color:#e6db74">&#34;2022-04-30&#34;</span>,<span style="color:#e6db74">&#34;2022-05-31&#34;</span>,<span style="color:#e6db74">&#34;2022-06-30&#34;</span>,<span style="color:#e6db74">&#34;2022-07-31&#34;</span>,<span style="color:#e6db74">&#34;2022-08-31&#34;</span>,<span style="color:#e6db74">&#34;2022-09-30&#34;</span>,<span style="color:#e6db74">&#34;2022-10-31&#34;</span>,<span style="color:#e6db74">&#34;2022-11-30&#34;</span>,<span style="color:#e6db74">&#34;2022-12-31&#34;</span>],
+</span></span><span style="display:flex;"><span>    Stock<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;TSLA&#34;</span>,<span style="color:#e6db74">&#34;TSLA&#34;</span>,<span style="color:#e6db74">&#34;TSLA&#34;</span>,<span style="color:#e6db74">&#34;TSLA&#34;</span>,<span style="color:#e6db74">&#34;TSLA&#34;</span>, <span style="color:#e6db74">&#34;TSLA&#34;</span>,<span style="color:#e6db74">&#34;TSLA&#34;</span>,<span style="color:#e6db74">&#34;TSLA&#34;</span>,<span style="color:#e6db74">&#34;TSLA&#34;</span>,<span style="color:#e6db74">&#34;TSLA&#34;</span>,<span style="color:#e6db74">&#34;TSLA&#34;</span>,<span style="color:#e6db74">&#34;TSLA&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;NFLX&#34;</span>,<span style="color:#e6db74">&#34;NFLX&#34;</span>,<span style="color:#e6db74">&#34;NFLX&#34;</span>,<span style="color:#e6db74">&#34;NFLX&#34;</span>,<span style="color:#e6db74">&#34;NFLX&#34;</span>,<span style="color:#e6db74">&#34;NFLX&#34;</span>,<span style="color:#e6db74">&#34;NFLX&#34;</span>,<span style="color:#e6db74">&#34;NFLX&#34;</span>,<span style="color:#e6db74">&#34;NFLX&#34;</span>,<span style="color:#e6db74">&#34;NFLX&#34;</span>,<span style="color:#e6db74">&#34;NFLX&#34;</span>,<span style="color:#e6db74">&#34;NFLX&#34;</span>],
+</span></span><span style="display:flex;"><span>    Price<span style="color:#f92672">=</span>[<span style="color:#ae81ff">312.24</span>,<span style="color:#ae81ff">290.14</span>,<span style="color:#ae81ff">359.2</span>,<span style="color:#ae81ff">290.25</span>,<span style="color:#ae81ff">252.75</span>,<span style="color:#ae81ff">224.47</span>,<span style="color:#ae81ff">297.15</span>,<span style="color:#ae81ff">275.61</span>,<span style="color:#ae81ff">265.25</span>,<span style="color:#ae81ff">227.54</span>,<span style="color:#ae81ff">194.7</span>,<span style="color:#ae81ff">121.82</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">427.14</span>,<span style="color:#ae81ff">394.52</span>,<span style="color:#ae81ff">374.59</span>,<span style="color:#ae81ff">190.36</span>,<span style="color:#ae81ff">197.44</span>,<span style="color:#ae81ff">174.87</span>,<span style="color:#ae81ff">224.9</span>,<span style="color:#ae81ff">223.56</span>,<span style="color:#ae81ff">235.44</span>,<span style="color:#ae81ff">291.88</span>,<span style="color:#ae81ff">305.53</span>,<span style="color:#ae81ff">291.12</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><pre tabindex="0"><code>## 24×3 DataFrame
+##  Row │ Date        Stock   Price
+##      │ String      String  Float64
+## ─────┼─────────────────────────────
+##    1 │ 2022-01-31  TSLA     312.24
+##    2 │ 2022-02-28  TSLA     290.14
+##    3 │ 2022-03-31  TSLA     359.2
+##    4 │ 2022-04-30  TSLA     290.25
+##    5 │ 2022-05-31  TSLA     252.75
+##    6 │ 2022-06-30  TSLA     224.47
+##    7 │ 2022-07-31  TSLA     297.15
+##    8 │ 2022-08-31  TSLA     275.61
+##   ⋮  │     ⋮         ⋮        ⋮
+##   18 │ 2022-06-30  NFLX     174.87
+##   19 │ 2022-07-31  NFLX     224.9
+##   20 │ 2022-08-31  NFLX     223.56
+##   21 │ 2022-09-30  NFLX     235.44
+##   22 │ 2022-10-31  NFLX     291.88
+##   23 │ 2022-11-30  NFLX     305.53
+##   24 │ 2022-12-31  NFLX     291.12
+##                      9 rows omitted
+</code></pre><h3 id="converting-a-string-column-to-date">Converting a <em><strong>String</strong></em> column to <em><strong>Date</strong></em></h3>
+<p>I have my own syntax.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>stockPrices<span style="color:#f92672">.</span>Date <span style="color:#f92672">=</span> Date<span style="color:#f92672">.</span>(stockPrices<span style="color:#f92672">.</span>Date, <span style="color:#e6db74">&#34;yyyy-mm-dd&#34;</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>## 24-element Vector{Date}:
+##  2022-01-31
+##  2022-02-28
+##  2022-03-31
+##  2022-04-30
+##  2022-05-31
+##  2022-06-30
+##  2022-07-31
+##  2022-08-31
+##  2022-09-30
+##  2022-10-31
+##  ⋮
+##  2022-04-30
+##  2022-05-31
+##  2022-06-30
+##  2022-07-31
+##  2022-08-31
+##  2022-09-30
+##  2022-10-31
+##  2022-11-30
+##  2022-12-31
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#75715e">### Frist 5 elements - I&#39;m like R and Python but &#34;first&#34; instead of &#34;head&#34;</span>
+</span></span><span style="display:flex;"><span>first(stockPrices, <span style="color:#ae81ff">5</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>## 5×3 DataFrame
+##  Row │ Date        Stock   Price
+##      │ Date        String  Float64
+## ─────┼─────────────────────────────
+##    1 │ 2022-01-31  TSLA     312.24
+##    2 │ 2022-02-28  TSLA     290.14
+##    3 │ 2022-03-31  TSLA     359.2
+##    4 │ 2022-04-30  TSLA     290.25
+##    5 │ 2022-05-31  TSLA     252.75
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Last 5 elements - I&#39;m like R and Python but &#34;last&#34; instead of &#34;tail&#34;</span>
+</span></span><span style="display:flex;"><span>last(stockPrices, <span style="color:#ae81ff">5</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>## 5×3 DataFrame
+##  Row │ Date        Stock   Price
+##      │ Date        String  Float64
+## ─────┼─────────────────────────────
+##    1 │ 2022-08-31  NFLX     223.56
+##    2 │ 2022-09-30  NFLX     235.44
+##    3 │ 2022-10-31  NFLX     291.88
+##    4 │ 2022-11-30  NFLX     305.53
+##    5 │ 2022-12-31  NFLX     291.12
+</code></pre><h2 id="importing-and-exporting-data">Importing and exporting data</h2>
+<h3 id="writing-a-dataframe-to-csv">Writing a DataFrame to csv</h3>
+<p>I&rsquo;m like R and Python but I have my own syntax.</p>
+<ul>
+<li>I first accept <em><strong>filename.csv</strong></em></li>
+<li>and then DataFrame <em><strong>name</strong></em></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>CSV<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#34;stockPrices.csv&#34;</span>, stockPrices)
+</span></span></code></pre></div><pre tabindex="0"><code>## &#34;stockPrices.csv&#34;
+</code></pre><h3 id="reading-data-from-csv-as-dataframe">Reading data from csv as DataFrame</h3>
+<p>I am neither Python nor R.</p>
+<ul>
+<li>First <em><strong>import</strong></em> me</li>
+<li>and then hug me with <em><strong>DataFrame()</strong></em></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>stockPrices <span style="color:#f92672">=</span> DataFrame(CSV<span style="color:#f92672">.</span>File(<span style="color:#e6db74">&#34;stockPrices.csv&#34;</span>))
+</span></span></code></pre></div><pre tabindex="0"><code>## 24×3 DataFrame
+##  Row │ Date        Stock    Price
+##      │ Date        String7  Float64
+## ─────┼──────────────────────────────
+##    1 │ 2022-01-31  TSLA      312.24
+##    2 │ 2022-02-28  TSLA      290.14
+##    3 │ 2022-03-31  TSLA      359.2
+##    4 │ 2022-04-30  TSLA      290.25
+##    5 │ 2022-05-31  TSLA      252.75
+##    6 │ 2022-06-30  TSLA      224.47
+##    7 │ 2022-07-31  TSLA      297.15
+##    8 │ 2022-08-31  TSLA      275.61
+##   ⋮  │     ⋮          ⋮        ⋮
+##   18 │ 2022-06-30  NFLX      174.87
+##   19 │ 2022-07-31  NFLX      224.9
+##   20 │ 2022-08-31  NFLX      223.56
+##   21 │ 2022-09-30  NFLX      235.44
+##   22 │ 2022-10-31  NFLX      291.88
+##   23 │ 2022-11-30  NFLX      305.53
+##   24 │ 2022-12-31  NFLX      291.12
+##                       9 rows omitted
+</code></pre><h3 id="group-by-and-combine">Group by and combine</h3>
+<p>I have my own syntax for groupby.</p>
+<ul>
+<li>I&rsquo;m first <em><strong>grouping by</strong></em></li>
+<li>then <em><strong>combining</strong></em></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>grp <span style="color:#f92672">=</span> groupby(stockPrices, <span style="color:#e6db74">:Stock</span>) 
+</span></span></code></pre></div><pre tabindex="0"><code>## GroupedDataFrame with 2 groups based on key: Stock
+## First Group (12 rows): Stock = &#34;TSLA&#34;
+##  Row │ Date        Stock    Price
+##      │ Date        String7  Float64
+## ─────┼──────────────────────────────
+##    1 │ 2022-01-31  TSLA      312.24
+##    2 │ 2022-02-28  TSLA      290.14
+##   ⋮  │     ⋮          ⋮        ⋮
+##   11 │ 2022-11-30  TSLA      194.7
+##   12 │ 2022-12-31  TSLA      121.82
+##                       8 rows omitted
+## ⋮
+## Last Group (12 rows): Stock = &#34;NFLX&#34;
+##  Row │ Date        Stock    Price
+##      │ Date        String7  Float64
+## ─────┼──────────────────────────────
+##    1 │ 2022-01-31  NFLX      427.14
+##    2 │ 2022-02-28  NFLX      394.52
+##   ⋮  │     ⋮          ⋮        ⋮
+##   12 │ 2022-12-31  NFLX      291.12
+##                       9 rows omitted
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>avg_prices <span style="color:#f92672">=</span> combine(grp, <span style="color:#e6db74">:Price</span> <span style="color:#f92672">=&gt;</span> mean)
+</span></span></code></pre></div><pre tabindex="0"><code>## 2×2 DataFrame
+##  Row │ Stock    Price_mean
+##      │ String7  Float64
+## ─────┼─────────────────────
+##    1 │ TSLA        259.26
+##    2 │ NFLX        277.613
+</code></pre><h3 id="filtering">Filtering</h3>
+<ul>
+<li>I&rsquo;m way better than Python,</li>
+<li>but slightly uglier than R</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>filter(row <span style="color:#f92672">-&gt;</span> row<span style="color:#f92672">.</span>Stock <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;NFLX&#34;</span>, stockPrices) <span style="color:#75715e"># filter values for Netflix</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 12×3 DataFrame
+##  Row │ Date        Stock    Price
+##      │ Date        String7  Float64
+## ─────┼──────────────────────────────
+##    1 │ 2022-01-31  NFLX      427.14
+##    2 │ 2022-02-28  NFLX      394.52
+##    3 │ 2022-03-31  NFLX      374.59
+##    4 │ 2022-04-30  NFLX      190.36
+##    5 │ 2022-05-31  NFLX      197.44
+##    6 │ 2022-06-30  NFLX      174.87
+##    7 │ 2022-07-31  NFLX      224.9
+##    8 │ 2022-08-31  NFLX      223.56
+##    9 │ 2022-09-30  NFLX      235.44
+##   10 │ 2022-10-31  NFLX      291.88
+##   11 │ 2022-11-30  NFLX      305.53
+##   12 │ 2022-12-31  NFLX      291.12
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#75715e"># you can use any name in place of row</span>
+</span></span><span style="display:flex;"><span>filter(DonaldTrump <span style="color:#f92672">-&gt;</span> DonaldTrump<span style="color:#f92672">.</span>Stock <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;NFLX&#34;</span>, stockPrices) <span style="color:#75715e"># I will be gladly working as well</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 12×3 DataFrame
+##  Row │ Date        Stock    Price
+##      │ Date        String7  Float64
+## ─────┼──────────────────────────────
+##    1 │ 2022-01-31  NFLX      427.14
+##    2 │ 2022-02-28  NFLX      394.52
+##    3 │ 2022-03-31  NFLX      374.59
+##    4 │ 2022-04-30  NFLX      190.36
+##    5 │ 2022-05-31  NFLX      197.44
+##    6 │ 2022-06-30  NFLX      174.87
+##    7 │ 2022-07-31  NFLX      224.9
+##    8 │ 2022-08-31  NFLX      223.56
+##    9 │ 2022-09-30  NFLX      235.44
+##   10 │ 2022-10-31  NFLX      291.88
+##   11 │ 2022-11-30  NFLX      305.53
+##   12 │ 2022-12-31  NFLX      291.12
+</code></pre><h2 id="plotting">Plotting</h2>
+<h3 id="plotting-with-plotsjl">Plotting with <em>Plots.jl</em></h3>
+<ul>
+<li>I&rsquo;m similar to base plot in R, matplotlib in Python</li>
+<li>I&rsquo;m way better than Python,</li>
+<li>and similar to R</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Plots<span style="color:#f92672">.</span>plot(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Stock Price&#34;</span>, linewidth <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Stock Price&#34;</span>);
+</span></span><span style="display:flex;"><span>Plots<span style="color:#f92672">.</span>plot!(xlabel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Date&#34;</span>);
+</span></span><span style="display:flex;"><span>Plots<span style="color:#f92672">.</span>plot!(ylabel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Price&#34;</span>)
+</span></span></code></pre></div><p><img src="index.en_files/figure-html/unnamed-chunk-27-J1.png" alt=""><!-- --></p>
+<h3 id="plotting-with-gadflyjl">Plotting with <em>Gadfly.jl</em></h3>
+<ul>
+<li>I&rsquo;m similar to <em><strong>ggplot2</strong></em> in <strong>R</strong>,</li>
+<li><strong>not similar to anything</strong> in Python. <strong>Python never succeeded in plotting</strong>.</li>
+<li>I&rsquo;m way way way better than Python,</li>
+<li>but less sophisticated than R.</li>
+<li>I know R is by far the best in Plotting</li>
+<li>but I&rsquo;m doing my best to catch it.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Gadfly<span style="color:#f92672">.</span>plot(stockPrices, x<span style="color:#f92672">=</span><span style="color:#e6db74">:Date</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">:Price</span>, Geom<span style="color:#f92672">.</span>line, color <span style="color:#f92672">=</span> <span style="color:#e6db74">:Stock</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>## Plot(...)
+</code></pre><p><img src="/img/gadfly_plot.PNG" alt="gadfly plot"></p>
+<p>Check this out to learn why I was created in the first place:</p>
+<p><a href="https://julialang.org/blog/2012/02/why-we-created-julia/">Why I was created</a></p>
+<p><a href="https://julialang.org/">Learn more about me</a></p>
+<p><a href="https://julialang.org/downloads/">Download me from</a></p>
+<p><a href="https://docs.julialang.org/en/v1/">Read my (1.8) documentation</a></p>
+<p><a href="https://julialang.org/learning/tryjulia/">Run me online</a></p>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://plootra.com/tags/r"
+      >R</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://plootra.com/tags/python"
+      >Python</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://plootra.com/tags/julia"
+      >Julia</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://plootra.com/tags/julialang"
+      >Julialang</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://plootra.com/tags/data-science"
+      >Data Science</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  <nav
+    class="mt-24 flex rounded-lg bg-black/[3%] p-1.5 text-lg dark:bg-white/[8%]"
+  >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-md p-6 pl-3 no-underline hover:bg-black/[2%]"
+      href="https://plootra.com/2023/01/embeding-shiny-into-a-blogdown-post/"
+      ><span>How to Embed Shiny Apps Into a blogdown Post</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+
+  
+  
+  <div class="mt-24" id="graphcomment"></div>
+  <script type="text/javascript">
+    var __semio__params = {
+      graphcommentId: 'plootra',
+      behaviour: {
+        
+      },
+      
+    };
+
+    function __semio__onload() {
+      __semio__gc_graphlogin(__semio__params);
+    }
+
+    (function () {
+      var gc = document.createElement('script');
+      gc.type = 'text/javascript';
+      gc.async = true;
+      gc.onload = __semio__onload;
+      gc.defer = true;
+      gc.src =
+        'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(gc);
+    })();
+  </script>
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://plootra.com/">Plootra</a> 
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>

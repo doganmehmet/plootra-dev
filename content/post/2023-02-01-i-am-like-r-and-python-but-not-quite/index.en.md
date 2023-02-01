@@ -1,9 +1,9 @@
 ---
-title: "I Am Like R and Python But Not Quite"
+title: "I Am Like Python and R But Not Quite"
 description: "A mini-funny Julia crash course for Python and R users"
 author: "Mehmet Dogan"
 date: '2023-02-01'
-slug: i-am-like-r-and-python-but-not-quite
+slug: i-am-like-python-and-r-but-not-quite
 categories: Julia
 tags:
 - R
@@ -70,9 +70,27 @@ using Statistics # similar to base R, base Python
 using Dates # similar to date in base R and datetime in python
 ```
 
+## Vectors
+I'm same as python
+
+
+```julia
+my_vector = [1, 2, 3, 4, 5]
+```
+
+```
+## 5-element Vector{Int64}:
+##  1
+##  2
+##  3
+##  4
+##  5
+```
+
+
 ## Control Flow
 
-### If loops
+### If statement
 - I'm like Python but without **:**
 - like R but w/o ugly ***{ }s***
 - I must end with ***end***
@@ -91,7 +109,7 @@ end
 ```
 ## Print me
 ```
-### While loops
+### While loop
 - I'm like Python but without **:**
 - like R but w/o ugly ***{ }s***
 - I must end with ***end***
@@ -115,7 +133,7 @@ end
 ## Print me 1
 ```
 
-### for loops
+### For loop
 - I'm like Python but without **:**
 - like R but w/o ugly ***{ }s***
 - I must end with ***end***
@@ -305,7 +323,7 @@ stockPrices = DataFrame(
 ##   24 │ 2022-12-31  NFLX     291.12
 ##                      9 rows omitted
 ```
-### Converting a String to datetime
+### Converting a ***String*** column to ***Date***
 I have my own syntax. 
 
 ```julia
@@ -372,9 +390,9 @@ last(stockPrices, 5)
 ##    5 │ 2022-12-31  NFLX     291.12
 ```
 
-## Importing and Exporting
+## Importing and exporting data
 
-### Exporting data to a csv
+### Writing a DataFrame to csv
 I'm like R and Python but I have my own syntax. 
 - I first accept ***filename.csv*** 
 - and then DataFrame ***name***
@@ -388,7 +406,7 @@ CSV.write("stockPrices.csv", stockPrices)
 ## "stockPrices.csv"
 ```
 
-### Importing data from csv as DataFrame
+### Reading data from csv as DataFrame
 I am neither Python nor R.
 - First ***import*** me 
 - and then hug me with ***DataFrame()***
@@ -520,9 +538,9 @@ filter(DonaldTrump -> DonaldTrump.Stock == "NFLX", stockPrices) # I will be glad
 ##   12 │ 2022-12-31  NFLX      291.12
 ```
 
-## Plots
+## Plotting
 
-### Plotting with *Plots* 
+### Plotting with *Plots.jl* 
 
 - I'm similar to base plot in R, matplotlib in Python
 - I'm way better than Python,
@@ -534,13 +552,13 @@ Plots.plot!(xlabel = "Date");
 Plots.plot!(ylabel = "Price")
 ```
 
-![](index.en_files/figure-html/unnamed-chunk-26-J1.png)<!-- -->
+![](index.en_files/figure-html/unnamed-chunk-27-J1.png)<!-- -->
 
-### Plotting with ***Gadfly***
+### Plotting with *Gadfly.jl*
 - I'm similar to ***ggplot2*** in **R**,
-- **not similar to anything** in Python. **Python never succeeded in plotting**
+- **not similar to anything** in Python. **Python never succeeded in plotting**.
 - I'm way way way better than Python,
-- and less sophisticated than R.
+- but less sophisticated than R.
 - I know R is by far the best in Plotting
 - but I'm doing my best to catch it.
 
