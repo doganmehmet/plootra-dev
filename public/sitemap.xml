@@ -3,21 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://plootra.com/</loc>
-    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/categories/</loc>
+    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/tags/data-science/</loc>
+    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/2023/02/i-am-like-r-and-python-but-not-quite/</loc>
+    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/tags/julia/</loc>
+    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/categories/julia/</loc>
+    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/tags/julialang/</loc>
+    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/post/</loc>
+    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/tags/python/</loc>
+    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/tags/r/</loc>
+    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://plootra.com/tags/</loc>
+    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/tags/blogdown/</loc>
     <lastmod>2023-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://plootra.com/categories/</loc>
-    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://plootra.com/post/embeding-shiny-into-a-blogdown-post/</loc>
-    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://plootra.com/post/</loc>
-    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://plootra.com/tags/r/</loc>
+    <loc>https://plootra.com/2023/01/embeding-shiny-into-a-blogdown-post/</loc>
     <lastmod>2023-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/categories/r/</loc>
@@ -26,16 +47,13 @@
     <loc>https://plootra.com/tags/shiny/</loc>
     <lastmod>2023-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://plootra.com/tags/</loc>
-    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://plootra.com/2023/01/about/</loc>
+    <loc>https://plootra.com/about/</loc>
     <lastmod>2023-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://plootra.com/2023/01/contact/</loc>
+    <loc>https://plootra.com/contact/</loc>
     <lastmod>2023-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://plootra.com/post/2020-12-01-r-rmarkdown/</loc>
+    <loc>https://plootra.com/2020/12/hello-r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://plootra.com/tags/plot/</loc>
@@ -47,7 +65,7 @@
     <loc>https://plootra.com/tags/regression/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://plootra.com/2019/05/</loc>
+    <loc>https://plootra.com/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/tags/css/</loc>
@@ -59,7 +77,7 @@
     <loc>https://plootra.com/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://plootra.com/post/markdown-syntax/</loc>
+    <loc>https://plootra.com/2019/03/markdown-syntax-guide/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/series/</loc>
@@ -77,19 +95,19 @@
     <loc>https://plootra.com/tags/privacy/</loc>
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://plootra.com/post/rich-content/</loc>
+    <loc>https://plootra.com/2019/03/rich-content/</loc>
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/tags/shortcodes/</loc>
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://plootra.com/post/math-typesetting/</loc>
+    <loc>https://plootra.com/2019/03/math-typesetting/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/tags/emoji/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://plootra.com/post/emoji-support/</loc>
+    <loc>https://plootra.com/2019/03/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://plootra.com/tags/index/</loc>

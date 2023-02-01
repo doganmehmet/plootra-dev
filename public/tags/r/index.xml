@@ -7,13 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2023</copyright>
-    <lastBuildDate>Fri, 27 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://plootra.com/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://plootra.com/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Am Like R and Python But Not Quite</title>
+      <link>https://plootra.com/2023/02/i-am-like-r-and-python-but-not-quite/</link>
+      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://plootra.com/2023/02/i-am-like-r-and-python-but-not-quite/</guid>
+      <description>A mini-funny Julia crash course for Python and R users Hello, World! I&amp;rsquo;m Julia. I&amp;rsquo;m like Python and R but I have my personality.
+You can run me online to follow this tutorial if you haven&amp;rsquo;t installed me already.
+Printing I can print everything using print() or println()
+print(): prints on the same line println(): adds a new line to the end of the output println(&amp;#34;Hello, I&amp;#39;m Julia&amp;#34;) ## Hello, I&amp;#39;m Julia println(&amp;#34;I&amp;#39;m like like Python and R, but not quite&amp;#34;) ## I&amp;#39;m like like Python and R, but not quite Package management Installing a package I install new packages using:</description>
+    </item>
+    
     <item>
       <title>How to Embed Shiny Apps Into a blogdown Post</title>
-      <link>https://plootra.com/post/embeding-shiny-into-a-blogdown-post/</link>
+      <link>https://plootra.com/2023/01/embeding-shiny-into-a-blogdown-post/</link>
       <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://plootra.com/post/embeding-shiny-into-a-blogdown-post/</guid>
+      <guid>https://plootra.com/2023/01/embeding-shiny-into-a-blogdown-post/</guid>
       <description>If you have a website or blog and would like to embed a shiny app into your content, I will walk you through three alternatives to achieve it in this article.
 How to embed a shiny app into a blogdown post? How to make it responsive? How can we create a custom Hugo shortcode and reuse it in future content? (for Hugo sites only) Embedding shiny apps into your content allows readers to engage with your content, enabling you to convey your message easier.</description>
     </item>

@@ -13,8 +13,8 @@ googleAnalytics: G-2MNSX43ZM3
 enableEmoji: true
 
 permalinks:
-  /: /:year/:month/:slug/
-  # post: /:year/:month/:slug/ # originally it was /:year/:month/:title/
+  # /: /:year/:month/:slug/
+  post: /:year/:month/:slug/ # originally it was /:year/:month/:title/
   
 params:
   # avatar: nanxiaobei@gmail.com
@@ -43,10 +43,10 @@ menu:
       name: Contact
       url: /contact/
       weight: 10
-    - identifier: shiny
-      name: Shiny
-      url: /shiny/
-      weight: 10
+    # - identifier: shiny
+    #   name: Shiny
+    #   url: /shiny/
+    #   weight: 10
 
       
 taxonomies:

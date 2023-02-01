@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Julia on Plootra | Analytics for financial markets and investing</title>
+    <link>https://plootra.com/categories/julia/</link>
+    <description>Recent content in Julia on Plootra | Analytics for financial markets and investing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2023</copyright>
+    <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://plootra.com/categories/julia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Am Like R and Python But Not Quite</title>
+      <link>https://plootra.com/2023/02/i-am-like-r-and-python-but-not-quite/</link>
+      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://plootra.com/2023/02/i-am-like-r-and-python-but-not-quite/</guid>
+      <description>A mini-funny Julia crash course for Python and R users Hello, World! I&amp;rsquo;m Julia. I&amp;rsquo;m like Python and R but I have my personality.
+You can run me online to follow this tutorial if you haven&amp;rsquo;t installed me already.
+Printing I can print everything using print() or println()
+print(): prints on the same line println(): adds a new line to the end of the output println(&amp;#34;Hello, I&amp;#39;m Julia&amp;#34;) ## Hello, I&amp;#39;m Julia println(&amp;#34;I&amp;#39;m like like Python and R, but not quite&amp;#34;) ## I&amp;#39;m like like Python and R, but not quite Package management Installing a package I install new packages using:</description>
+    </item>
+    
+  </channel>
+</rss>
