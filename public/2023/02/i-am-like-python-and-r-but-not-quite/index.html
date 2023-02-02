@@ -142,7 +142,7 @@ if (!doNotTrack) {
   <meta itemprop="name" content="I Am Like Python and R But Not Quite">
 <meta itemprop="description" content="A mini-funny Julia crash course for Python and R users"><meta itemprop="datePublished" content="2023-02-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-02-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1712">
+<meta itemprop="wordCount" content="1962">
 <meta itemprop="keywords" content="R,Python,Julia,Julialang,Data Science," />
   
   <meta name="twitter:card" content="summary"/>
@@ -284,7 +284,7 @@ if (!doNotTrack) {
       
       
       <span class="mx-1">&middot;</span>
-      <span>9 min read</span>
+      <span>10 min read</span>
       
   
       
@@ -313,28 +313,113 @@ I&rsquo;m <strong>Julia</strong>. I&rsquo;m like Python and R but I have my pers
 <li><em><strong>Pkg.add(&ldquo;package_name&rdquo;)</strong></em></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Pkg
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#Pkg.add(&#34;DataFrames&#34;) </span>
+</span></span><span style="display:flex;"><span>Pkg<span style="color:#f92672">.</span>add(<span style="color:#e6db74">&#34;DataFrames&#34;</span>) 
 </span></span></code></pre></div><h3 id="adding-a-package-to-current-session">Adding a package to current session</h3>
 <p>I add packages to my current session via <em><strong>using</strong></em> keyword:</p>
 <ul>
 <li><em><strong>using package_name</strong></em></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Plots <span style="color:#75715e"># similar to base R plot, matplotlib in Python</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Gadfly <span style="color:#75715e"># similar to ggplot2, not similar to anything in python - this was never achieved in Python</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> RDatasets <span style="color:#75715e"># equivalent of rdatasets package</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> DataFrames <span style="color:#75715e"># similar to data.frame, data.table and dplyr in R, pandas in Python</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> DataFrames <span style="color:#75715e"># similar to data.frame, data.table and dplyr in R, pandas in Python</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> CSV <span style="color:#75715e"># similar to read.csv, readr in R, pandas in Python</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Statistics <span style="color:#75715e"># similar to base R, base Python</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Dates <span style="color:#75715e"># similar to date in base R and datetime in python</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Plots <span style="color:#75715e"># similar to base R plot, matplotlib in Python</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Gadfly <span style="color:#75715e"># similar to ggplot2, not similar to anything in python - this was never achieved in Python</span>
 </span></span></code></pre></div><h2 id="vectors">Vectors</h2>
-<p>I&rsquo;m same as python</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>my_vector <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+<p>I&rsquo;m like python,</p>
+<ul>
+<li>but I can do element-wise calculations like R</li>
+<li>my syntax is a little bit strange in particularly when multiplying and dividing</li>
+<li>because I don&rsquo;t want you to be wrong.</li>
+</ul>
+<h3 id="creating-a-vector">Creating a vector</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>first_vector <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
 </span></span></code></pre></div><pre tabindex="0"><code>## 5-element Vector{Int64}:
 ##  1
 ##  2
 ##  3
 ##  4
 ##  5
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>second_vector<span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>]
+</span></span></code></pre></div><pre tabindex="0"><code>## 5-element Vector{Int64}:
+##  10
+##  10
+##  10
+##  10
+##  10
+</code></pre><h3 id="element-wise-calculations">Element-wise calculations</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#75715e"># Addition</span>
+</span></span><span style="display:flex;"><span>first_vector <span style="color:#f92672">+</span> second_vector
+</span></span></code></pre></div><pre tabindex="0"><code>## 5-element Vector{Int64}:
+##  11
+##  12
+##  13
+##  14
+##  15
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>first_vector <span style="color:#f92672">.+</span> second_vector <span style="color:#75715e"># the same as above</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 5-element Vector{Int64}:
+##  11
+##  12
+##  13
+##  14
+##  15
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Subtraction</span>
+</span></span><span style="display:flex;"><span>first_vector <span style="color:#f92672">-</span> second_vector
+</span></span></code></pre></div><pre tabindex="0"><code>## 5-element Vector{Int64}:
+##  -9
+##  -8
+##  -7
+##  -6
+##  -5
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>first_vector <span style="color:#f92672">.-</span> second_vector
+</span></span></code></pre></div><pre tabindex="0"><code>## 5-element Vector{Int64}:
+##  -9
+##  -8
+##  -7
+##  -6
+##  -5
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Multiplication</span>
+</span></span><span style="display:flex;"><span>first_vector <span style="color:#f92672">.*</span> second_vector
+</span></span></code></pre></div><pre tabindex="0"><code>## 5-element Vector{Int64}:
+##  10
+##  20
+##  30
+##  40
+##  50
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Division</span>
+</span></span><span style="display:flex;"><span>first_vector <span style="color:#f92672">./</span> second_vector
+</span></span></code></pre></div><pre tabindex="0"><code>## 5-element Vector{Float64}:
+##  0.1
+##  0.2
+##  0.3
+##  0.4
+##  0.5
+</code></pre><h3 id="slicing-vectors">Slicing vectors</h3>
+<ul>
+<li>My index starts from 0, just like R</li>
+<li>When slicing, I include last index value like R but unlike Python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>my_vect <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Select the first element</span>
+</span></span><span style="display:flex;"><span>my_vect[<span style="color:#ae81ff">1</span>]
+</span></span></code></pre></div><pre tabindex="0"><code>## 1
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>my_vect[<span style="color:#66d9ef">begin</span>] <span style="color:#75715e"># the same as above</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 1
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Select the first three elements</span>
+</span></span><span style="display:flex;"><span>my_vect[<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>]
+</span></span></code></pre></div><pre tabindex="0"><code>## 3-element Vector{Int64}:
+##  1
+##  2
+##  3
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Select the last element</span>
+</span></span><span style="display:flex;"><span>my_vect[<span style="color:#66d9ef">end</span>]
+</span></span></code></pre></div><pre tabindex="0"><code>## 5
 </code></pre><h2 id="control-flow">Control Flow</h2>
 <h3 id="if-statement">If statement</h3>
 <ul>
@@ -356,7 +441,7 @@ I&rsquo;m <strong>Julia</strong>. I&rsquo;m like Python and R but I have my pers
 <li>I&rsquo;m like Python but without <strong>:</strong></li>
 <li>like R but w/o ugly <em><strong>{ }s</strong></em></li>
 <li>I must end with <em><strong>end</strong></em></li>
-<li>Unlike Python I don&rsquo;t need <em><strong>indentation</strong></em> but I prefer to have it.</li>
+<li>Unlike Python I don&rsquo;t need <em><strong>indentation</strong></em> but I prefer to have it</li>
 <li>If I want to access a global variable inside of me I set <em><strong>global variable_name</strong></em>.</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
@@ -383,7 +468,8 @@ I&rsquo;m <strong>Julia</strong>. I&rsquo;m like Python and R but I have my pers
 </span></span></code></pre></div><pre tabindex="0"><code>## 1,2,3,4,5,6,7,8,9,10,
 </code></pre><h2 id="functions">Functions</h2>
 <ul>
-<li>I&rsquo;m like R but w/o ugly <em><strong>{ }s</strong></em></li>
+<li>I&rsquo;m like Python but without <strong>:</strong></li>
+<li>like R but w/o ugly <em><strong>{ }s</strong></em></li>
 <li>I must end with <em><strong>end</strong></em></li>
 <li>Unlike Python I don&rsquo;t need <em><strong>indentation</strong></em> but I prefer to have it.</li>
 </ul>
@@ -415,10 +501,11 @@ I&rsquo;m <strong>Julia</strong>. I&rsquo;m like Python and R but I have my pers
 ##    3 │ C           3
 ##    4 │ D           4
 </code></pre><h3 id="slicing-dataframes">Slicing DataFrames</h3>
-<p>I&rsquo;m like R and Python but not quite.</p>
 <ul>
+<li>My index starts from 0, just like R</li>
+<li>I include last index value when slicing like R but unlike Python</li>
 <li>I don&rsquo;t need annoying <strong>loc</strong> and <strong>iloc</strong></li>
-<li>I don&rsquo;t complain about copying.</li>
+<li>and don&rsquo;t complain about copying as in Python</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>Stock <span style="color:#75715e"># all elements of Stock column</span>
 </span></span></code></pre></div><pre tabindex="0"><code>## 4-element Vector{String}:
@@ -508,7 +595,8 @@ I&rsquo;m <strong>Julia</strong>. I&rsquo;m like Python and R but I have my pers
 ##  2022-10-31
 ##  2022-11-30
 ##  2022-12-31
-</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#75715e">### Frist 5 elements - I&#39;m like R and Python but &#34;first&#34; instead of &#34;head&#34;</span>
+</code></pre><h3 id="displaying-first-n-and-last-n-elements">Displaying first n and last n elements</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#75715e">### Frist 5 elements - I&#39;m like R and Python but &#34;first&#34; instead of &#34;head&#34;</span>
 </span></span><span style="display:flex;"><span>first(stockPrices, <span style="color:#ae81ff">5</span>)
 </span></span></code></pre></div><pre tabindex="0"><code>## 5×3 DataFrame
 ##  Row │ Date        Stock   Price
@@ -531,6 +619,81 @@ I&rsquo;m <strong>Julia</strong>. I&rsquo;m like Python and R but I have my pers
 ##    3 │ 2022-10-31  NFLX     291.88
 ##    4 │ 2022-11-30  NFLX     305.53
 ##    5 │ 2022-12-31  NFLX     291.12
+</code></pre><h3 id="group-by-and-combine">Group by and combine</h3>
+<p>I have my own syntax for groupby.</p>
+<ul>
+<li>I&rsquo;m first <em><strong>grouping by</strong></em></li>
+<li>then <em><strong>combining</strong></em></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>grp <span style="color:#f92672">=</span> groupby(stockPrices, <span style="color:#e6db74">:Stock</span>) 
+</span></span></code></pre></div><pre tabindex="0"><code>## GroupedDataFrame with 2 groups based on key: Stock
+## First Group (12 rows): Stock = &#34;TSLA&#34;
+##  Row │ Date        Stock   Price
+##      │ Date        String  Float64
+## ─────┼─────────────────────────────
+##    1 │ 2022-01-31  TSLA     312.24
+##    2 │ 2022-02-28  TSLA     290.14
+##   ⋮  │     ⋮         ⋮        ⋮
+##   11 │ 2022-11-30  TSLA     194.7
+##   12 │ 2022-12-31  TSLA     121.82
+##                      8 rows omitted
+## ⋮
+## Last Group (12 rows): Stock = &#34;NFLX&#34;
+##  Row │ Date        Stock   Price
+##      │ Date        String  Float64
+## ─────┼─────────────────────────────
+##    1 │ 2022-01-31  NFLX     427.14
+##    2 │ 2022-02-28  NFLX     394.52
+##   ⋮  │     ⋮         ⋮        ⋮
+##   12 │ 2022-12-31  NFLX     291.12
+##                      9 rows omitted
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>avg_prices <span style="color:#f92672">=</span> combine(grp, <span style="color:#e6db74">:Price</span> <span style="color:#f92672">=&gt;</span> mean)
+</span></span></code></pre></div><pre tabindex="0"><code>## 2×2 DataFrame
+##  Row │ Stock   Price_mean
+##      │ String  Float64
+## ─────┼────────────────────
+##    1 │ TSLA       259.26
+##    2 │ NFLX       277.613
+</code></pre><h3 id="filtering">Filtering</h3>
+<ul>
+<li>I&rsquo;m way better than Python,</li>
+<li>but slightly uglier than R</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>filter(row <span style="color:#f92672">-&gt;</span> row<span style="color:#f92672">.</span>Stock <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;NFLX&#34;</span>, stockPrices) <span style="color:#75715e"># filter values for Netflix</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 12×3 DataFrame
+##  Row │ Date        Stock   Price
+##      │ Date        String  Float64
+## ─────┼─────────────────────────────
+##    1 │ 2022-01-31  NFLX     427.14
+##    2 │ 2022-02-28  NFLX     394.52
+##    3 │ 2022-03-31  NFLX     374.59
+##    4 │ 2022-04-30  NFLX     190.36
+##    5 │ 2022-05-31  NFLX     197.44
+##    6 │ 2022-06-30  NFLX     174.87
+##    7 │ 2022-07-31  NFLX     224.9
+##    8 │ 2022-08-31  NFLX     223.56
+##    9 │ 2022-09-30  NFLX     235.44
+##   10 │ 2022-10-31  NFLX     291.88
+##   11 │ 2022-11-30  NFLX     305.53
+##   12 │ 2022-12-31  NFLX     291.12
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#75715e"># you can use any name in place of row</span>
+</span></span><span style="display:flex;"><span>filter(DonaldTrump <span style="color:#f92672">-&gt;</span> DonaldTrump<span style="color:#f92672">.</span>Stock <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;NFLX&#34;</span>, stockPrices) <span style="color:#75715e"># I will be gladly working as well</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## 12×3 DataFrame
+##  Row │ Date        Stock   Price
+##      │ Date        String  Float64
+## ─────┼─────────────────────────────
+##    1 │ 2022-01-31  NFLX     427.14
+##    2 │ 2022-02-28  NFLX     394.52
+##    3 │ 2022-03-31  NFLX     374.59
+##    4 │ 2022-04-30  NFLX     190.36
+##    5 │ 2022-05-31  NFLX     197.44
+##    6 │ 2022-06-30  NFLX     174.87
+##    7 │ 2022-07-31  NFLX     224.9
+##    8 │ 2022-08-31  NFLX     223.56
+##    9 │ 2022-09-30  NFLX     235.44
+##   10 │ 2022-10-31  NFLX     291.88
+##   11 │ 2022-11-30  NFLX     305.53
+##   12 │ 2022-12-31  NFLX     291.12
 </code></pre><h2 id="importing-and-exporting-data">Importing and exporting data</h2>
 <h3 id="writing-a-dataframe-to-csv">Writing a DataFrame to csv</h3>
 <p>I&rsquo;m like R and Python but I have my own syntax.</p>
@@ -568,81 +731,6 @@ I&rsquo;m <strong>Julia</strong>. I&rsquo;m like Python and R but I have my pers
 ##   23 │ 2022-11-30  NFLX      305.53
 ##   24 │ 2022-12-31  NFLX      291.12
 ##                       9 rows omitted
-</code></pre><h3 id="group-by-and-combine">Group by and combine</h3>
-<p>I have my own syntax for groupby.</p>
-<ul>
-<li>I&rsquo;m first <em><strong>grouping by</strong></em></li>
-<li>then <em><strong>combining</strong></em></li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>grp <span style="color:#f92672">=</span> groupby(stockPrices, <span style="color:#e6db74">:Stock</span>) 
-</span></span></code></pre></div><pre tabindex="0"><code>## GroupedDataFrame with 2 groups based on key: Stock
-## First Group (12 rows): Stock = &#34;TSLA&#34;
-##  Row │ Date        Stock    Price
-##      │ Date        String7  Float64
-## ─────┼──────────────────────────────
-##    1 │ 2022-01-31  TSLA      312.24
-##    2 │ 2022-02-28  TSLA      290.14
-##   ⋮  │     ⋮          ⋮        ⋮
-##   11 │ 2022-11-30  TSLA      194.7
-##   12 │ 2022-12-31  TSLA      121.82
-##                       8 rows omitted
-## ⋮
-## Last Group (12 rows): Stock = &#34;NFLX&#34;
-##  Row │ Date        Stock    Price
-##      │ Date        String7  Float64
-## ─────┼──────────────────────────────
-##    1 │ 2022-01-31  NFLX      427.14
-##    2 │ 2022-02-28  NFLX      394.52
-##   ⋮  │     ⋮          ⋮        ⋮
-##   12 │ 2022-12-31  NFLX      291.12
-##                       9 rows omitted
-</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>avg_prices <span style="color:#f92672">=</span> combine(grp, <span style="color:#e6db74">:Price</span> <span style="color:#f92672">=&gt;</span> mean)
-</span></span></code></pre></div><pre tabindex="0"><code>## 2×2 DataFrame
-##  Row │ Stock    Price_mean
-##      │ String7  Float64
-## ─────┼─────────────────────
-##    1 │ TSLA        259.26
-##    2 │ NFLX        277.613
-</code></pre><h3 id="filtering">Filtering</h3>
-<ul>
-<li>I&rsquo;m way better than Python,</li>
-<li>but slightly uglier than R</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>filter(row <span style="color:#f92672">-&gt;</span> row<span style="color:#f92672">.</span>Stock <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;NFLX&#34;</span>, stockPrices) <span style="color:#75715e"># filter values for Netflix</span>
-</span></span></code></pre></div><pre tabindex="0"><code>## 12×3 DataFrame
-##  Row │ Date        Stock    Price
-##      │ Date        String7  Float64
-## ─────┼──────────────────────────────
-##    1 │ 2022-01-31  NFLX      427.14
-##    2 │ 2022-02-28  NFLX      394.52
-##    3 │ 2022-03-31  NFLX      374.59
-##    4 │ 2022-04-30  NFLX      190.36
-##    5 │ 2022-05-31  NFLX      197.44
-##    6 │ 2022-06-30  NFLX      174.87
-##    7 │ 2022-07-31  NFLX      224.9
-##    8 │ 2022-08-31  NFLX      223.56
-##    9 │ 2022-09-30  NFLX      235.44
-##   10 │ 2022-10-31  NFLX      291.88
-##   11 │ 2022-11-30  NFLX      305.53
-##   12 │ 2022-12-31  NFLX      291.12
-</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#75715e"># you can use any name in place of row</span>
-</span></span><span style="display:flex;"><span>filter(DonaldTrump <span style="color:#f92672">-&gt;</span> DonaldTrump<span style="color:#f92672">.</span>Stock <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;NFLX&#34;</span>, stockPrices) <span style="color:#75715e"># I will be gladly working as well</span>
-</span></span></code></pre></div><pre tabindex="0"><code>## 12×3 DataFrame
-##  Row │ Date        Stock    Price
-##      │ Date        String7  Float64
-## ─────┼──────────────────────────────
-##    1 │ 2022-01-31  NFLX      427.14
-##    2 │ 2022-02-28  NFLX      394.52
-##    3 │ 2022-03-31  NFLX      374.59
-##    4 │ 2022-04-30  NFLX      190.36
-##    5 │ 2022-05-31  NFLX      197.44
-##    6 │ 2022-06-30  NFLX      174.87
-##    7 │ 2022-07-31  NFLX      224.9
-##    8 │ 2022-08-31  NFLX      223.56
-##    9 │ 2022-09-30  NFLX      235.44
-##   10 │ 2022-10-31  NFLX      291.88
-##   11 │ 2022-11-30  NFLX      305.53
-##   12 │ 2022-12-31  NFLX      291.12
 </code></pre><h2 id="plotting">Plotting</h2>
 <h3 id="plotting-with-plotsjl">Plotting with <em>Plots.jl</em></h3>
 <ul>
@@ -653,14 +741,14 @@ I&rsquo;m <strong>Julia</strong>. I&rsquo;m like Python and R but I have my pers
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Plots<span style="color:#f92672">.</span>plot(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Stock Price&#34;</span>, linewidth <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Stock Price&#34;</span>);
 </span></span><span style="display:flex;"><span>Plots<span style="color:#f92672">.</span>plot!(xlabel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Date&#34;</span>);
 </span></span><span style="display:flex;"><span>Plots<span style="color:#f92672">.</span>plot!(ylabel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Price&#34;</span>)
-</span></span></code></pre></div><p><img src="index.en_files/figure-html/unnamed-chunk-27-J1.png" alt=""><!-- --></p>
+</span></span></code></pre></div><p><img src="index.en_files/figure-html/unnamed-chunk-29-J1.png" alt=""><!-- --></p>
 <h3 id="plotting-with-gadflyjl">Plotting with <em>Gadfly.jl</em></h3>
 <ul>
-<li>I&rsquo;m similar to <em><strong>ggplot2</strong></em> in <strong>R</strong>,</li>
+<li>I&rsquo;m similar to <em><strong>ggplot2</strong></em> in <strong>R</strong></li>
 <li><strong>not similar to anything</strong> in Python. <strong>Python never succeeded in plotting</strong>.</li>
 <li>I&rsquo;m way way way better than Python,</li>
 <li>but less sophisticated than R.</li>
-<li>I know R is by far the best in Plotting</li>
+<li>I know R is by far the best in Plotting,</li>
 <li>but I&rsquo;m doing my best to catch it.</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Gadfly<span style="color:#f92672">.</span>plot(stockPrices, x<span style="color:#f92672">=</span><span style="color:#e6db74">:Date</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">:Price</span>, Geom<span style="color:#f92672">.</span>line, color <span style="color:#f92672">=</span> <span style="color:#e6db74">:Stock</span>)

@@ -52,7 +52,7 @@ I install new packages using:
 
 ```julia
 using Pkg
-#Pkg.add("DataFrames") 
+Pkg.add("DataFrames") 
 ```
 
 
@@ -61,21 +61,24 @@ I add packages to my current session via ***using*** keyword:
 - ***using package_name***
 
 ```julia
-using Plots # similar to base R plot, matplotlib in Python
-using Gadfly # similar to ggplot2, not similar to anything in python - this was never achieved in Python
-using RDatasets # equivalent of rdatasets package
 using DataFrames # similar to data.frame, data.table and dplyr in R, pandas in Python
 using CSV # similar to read.csv, readr in R, pandas in Python
 using Statistics # similar to base R, base Python
 using Dates # similar to date in base R and datetime in python
+using Plots # similar to base R plot, matplotlib in Python
+using Gadfly # similar to ggplot2, not similar to anything in python - this was never achieved in Python
 ```
 
 ## Vectors
-I'm same as python
+I'm like python,
+- but I can do element-wise calculations like R
+- my syntax is a little bit strange in particularly when multiplying and dividing
+- because I don't want you to be wrong.
 
+### Creating a vector
 
 ```julia
-my_vector = [1, 2, 3, 4, 5]
+first_vector = [1, 2, 3, 4, 5]
 ```
 
 ```
@@ -87,6 +90,152 @@ my_vector = [1, 2, 3, 4, 5]
 ##  5
 ```
 
+```julia
+second_vector= [10, 10, 10, 10, 10]
+```
+
+```
+## 5-element Vector{Int64}:
+##  10
+##  10
+##  10
+##  10
+##  10
+```
+
+### Element-wise calculations
+
+```julia
+# Addition
+first_vector + second_vector
+```
+
+```
+## 5-element Vector{Int64}:
+##  11
+##  12
+##  13
+##  14
+##  15
+```
+
+```julia
+first_vector .+ second_vector # the same as above
+```
+
+```
+## 5-element Vector{Int64}:
+##  11
+##  12
+##  13
+##  14
+##  15
+```
+
+```julia
+
+# Subtraction
+first_vector - second_vector
+```
+
+```
+## 5-element Vector{Int64}:
+##  -9
+##  -8
+##  -7
+##  -6
+##  -5
+```
+
+```julia
+first_vector .- second_vector
+```
+
+```
+## 5-element Vector{Int64}:
+##  -9
+##  -8
+##  -7
+##  -6
+##  -5
+```
+
+```julia
+
+# Multiplication
+first_vector .* second_vector
+```
+
+```
+## 5-element Vector{Int64}:
+##  10
+##  20
+##  30
+##  40
+##  50
+```
+
+```julia
+
+# Division
+first_vector ./ second_vector
+```
+
+```
+## 5-element Vector{Float64}:
+##  0.1
+##  0.2
+##  0.3
+##  0.4
+##  0.5
+```
+
+### Slicing vectors
+- My index starts from 0, just like R
+- When slicing, I include last index value like R but unlike Python
+
+
+```julia
+my_vect = [1, 2, 3, 4, 5];
+
+# Select the first element
+my_vect[1]
+```
+
+```
+## 1
+```
+
+```julia
+my_vect[begin] # the same as above
+```
+
+```
+## 1
+```
+
+```julia
+
+# Select the first three elements
+my_vect[1:3]
+```
+
+```
+## 3-element Vector{Int64}:
+##  1
+##  2
+##  3
+```
+
+```julia
+
+# Select the last element
+my_vect[end]
+```
+
+```
+## 5
+```
 
 ## Control Flow
 
@@ -113,7 +262,7 @@ end
 - I'm like Python but without **:**
 - like R but w/o ugly ***{ }s***
 - I must end with ***end***
-- Unlike Python I don't need ***indentation*** but I prefer to have it.
+- Unlike Python I don't need ***indentation*** but I prefer to have it
 - If I want to access a global variable inside of me I set ***global variable_name***.
 
 ```julia
@@ -149,7 +298,8 @@ end
 ## 1,2,3,4,5,6,7,8,9,10,
 ```
 ## Functions
-- I'm like R but w/o ugly ***{ }s***
+- I'm like Python but without **:**
+- like R but w/o ugly ***{ }s***
 - I must end with ***end***
 - Unlike Python I don't need ***indentation*** but I prefer to have it.
 
@@ -208,9 +358,10 @@ df = DataFrame(Stock=["A", "B", "C", "D"], Price=1:4)
 ##    4 │ D           4
 ```
 ### Slicing DataFrames
-I'm like R and Python but not quite. 
+- My index starts from 0, just like R
+- I include last index value when slicing like R but unlike Python
 - I don't need annoying **loc** and **iloc** 
-- I don't complain about copying.
+- and don't complain about copying as in Python
 
 ```julia
 df.Stock # all elements of Stock column
@@ -354,6 +505,7 @@ stockPrices.Date = Date.(stockPrices.Date, "yyyy-mm-dd")
 ##  2022-12-31
 ```
 
+### Displaying first n and last n elements
 
 ```julia
 ### Frist 5 elements - I'm like R and Python but "first" instead of "head"
@@ -390,13 +542,110 @@ last(stockPrices, 5)
 ##    5 │ 2022-12-31  NFLX     291.12
 ```
 
+
+### Group by and combine
+I have my own syntax for groupby. 
+- I'm first ***grouping by*** 
+- then ***combining***
+
+```julia
+grp = groupby(stockPrices, :Stock) 
+```
+
+```
+## GroupedDataFrame with 2 groups based on key: Stock
+## First Group (12 rows): Stock = "TSLA"
+##  Row │ Date        Stock   Price
+##      │ Date        String  Float64
+## ─────┼─────────────────────────────
+##    1 │ 2022-01-31  TSLA     312.24
+##    2 │ 2022-02-28  TSLA     290.14
+##   ⋮  │     ⋮         ⋮        ⋮
+##   11 │ 2022-11-30  TSLA     194.7
+##   12 │ 2022-12-31  TSLA     121.82
+##                      8 rows omitted
+## ⋮
+## Last Group (12 rows): Stock = "NFLX"
+##  Row │ Date        Stock   Price
+##      │ Date        String  Float64
+## ─────┼─────────────────────────────
+##    1 │ 2022-01-31  NFLX     427.14
+##    2 │ 2022-02-28  NFLX     394.52
+##   ⋮  │     ⋮         ⋮        ⋮
+##   12 │ 2022-12-31  NFLX     291.12
+##                      9 rows omitted
+```
+
+```julia
+avg_prices = combine(grp, :Price => mean)
+```
+
+```
+## 2×2 DataFrame
+##  Row │ Stock   Price_mean
+##      │ String  Float64
+## ─────┼────────────────────
+##    1 │ TSLA       259.26
+##    2 │ NFLX       277.613
+```
+
+### Filtering
+- I'm way better than Python,
+- but slightly uglier than R
+
+```julia
+filter(row -> row.Stock == "NFLX", stockPrices) # filter values for Netflix
+```
+
+```
+## 12×3 DataFrame
+##  Row │ Date        Stock   Price
+##      │ Date        String  Float64
+## ─────┼─────────────────────────────
+##    1 │ 2022-01-31  NFLX     427.14
+##    2 │ 2022-02-28  NFLX     394.52
+##    3 │ 2022-03-31  NFLX     374.59
+##    4 │ 2022-04-30  NFLX     190.36
+##    5 │ 2022-05-31  NFLX     197.44
+##    6 │ 2022-06-30  NFLX     174.87
+##    7 │ 2022-07-31  NFLX     224.9
+##    8 │ 2022-08-31  NFLX     223.56
+##    9 │ 2022-09-30  NFLX     235.44
+##   10 │ 2022-10-31  NFLX     291.88
+##   11 │ 2022-11-30  NFLX     305.53
+##   12 │ 2022-12-31  NFLX     291.12
+```
+
+
+```julia
+# you can use any name in place of row
+filter(DonaldTrump -> DonaldTrump.Stock == "NFLX", stockPrices) # I will be gladly working as well
+```
+
+```
+## 12×3 DataFrame
+##  Row │ Date        Stock   Price
+##      │ Date        String  Float64
+## ─────┼─────────────────────────────
+##    1 │ 2022-01-31  NFLX     427.14
+##    2 │ 2022-02-28  NFLX     394.52
+##    3 │ 2022-03-31  NFLX     374.59
+##    4 │ 2022-04-30  NFLX     190.36
+##    5 │ 2022-05-31  NFLX     197.44
+##    6 │ 2022-06-30  NFLX     174.87
+##    7 │ 2022-07-31  NFLX     224.9
+##    8 │ 2022-08-31  NFLX     223.56
+##    9 │ 2022-09-30  NFLX     235.44
+##   10 │ 2022-10-31  NFLX     291.88
+##   11 │ 2022-11-30  NFLX     305.53
+##   12 │ 2022-12-31  NFLX     291.12
+```
 ## Importing and exporting data
 
 ### Writing a DataFrame to csv
 I'm like R and Python but I have my own syntax. 
 - I first accept ***filename.csv*** 
 - and then DataFrame ***name***
-
 
 ```julia
 CSV.write("stockPrices.csv", stockPrices)
@@ -440,104 +689,6 @@ stockPrices = DataFrame(CSV.File("stockPrices.csv"))
 ```
 
 
-### Group by and combine
-I have my own syntax for groupby. 
-- I'm first ***grouping by*** 
-- then ***combining***
-
-```julia
-grp = groupby(stockPrices, :Stock) 
-```
-
-```
-## GroupedDataFrame with 2 groups based on key: Stock
-## First Group (12 rows): Stock = "TSLA"
-##  Row │ Date        Stock    Price
-##      │ Date        String7  Float64
-## ─────┼──────────────────────────────
-##    1 │ 2022-01-31  TSLA      312.24
-##    2 │ 2022-02-28  TSLA      290.14
-##   ⋮  │     ⋮          ⋮        ⋮
-##   11 │ 2022-11-30  TSLA      194.7
-##   12 │ 2022-12-31  TSLA      121.82
-##                       8 rows omitted
-## ⋮
-## Last Group (12 rows): Stock = "NFLX"
-##  Row │ Date        Stock    Price
-##      │ Date        String7  Float64
-## ─────┼──────────────────────────────
-##    1 │ 2022-01-31  NFLX      427.14
-##    2 │ 2022-02-28  NFLX      394.52
-##   ⋮  │     ⋮          ⋮        ⋮
-##   12 │ 2022-12-31  NFLX      291.12
-##                       9 rows omitted
-```
-
-```julia
-avg_prices = combine(grp, :Price => mean)
-```
-
-```
-## 2×2 DataFrame
-##  Row │ Stock    Price_mean
-##      │ String7  Float64
-## ─────┼─────────────────────
-##    1 │ TSLA        259.26
-##    2 │ NFLX        277.613
-```
-
-### Filtering
-- I'm way better than Python,
-- but slightly uglier than R
-
-```julia
-filter(row -> row.Stock == "NFLX", stockPrices) # filter values for Netflix
-```
-
-```
-## 12×3 DataFrame
-##  Row │ Date        Stock    Price
-##      │ Date        String7  Float64
-## ─────┼──────────────────────────────
-##    1 │ 2022-01-31  NFLX      427.14
-##    2 │ 2022-02-28  NFLX      394.52
-##    3 │ 2022-03-31  NFLX      374.59
-##    4 │ 2022-04-30  NFLX      190.36
-##    5 │ 2022-05-31  NFLX      197.44
-##    6 │ 2022-06-30  NFLX      174.87
-##    7 │ 2022-07-31  NFLX      224.9
-##    8 │ 2022-08-31  NFLX      223.56
-##    9 │ 2022-09-30  NFLX      235.44
-##   10 │ 2022-10-31  NFLX      291.88
-##   11 │ 2022-11-30  NFLX      305.53
-##   12 │ 2022-12-31  NFLX      291.12
-```
-
-
-```julia
-# you can use any name in place of row
-filter(DonaldTrump -> DonaldTrump.Stock == "NFLX", stockPrices) # I will be gladly working as well
-```
-
-```
-## 12×3 DataFrame
-##  Row │ Date        Stock    Price
-##      │ Date        String7  Float64
-## ─────┼──────────────────────────────
-##    1 │ 2022-01-31  NFLX      427.14
-##    2 │ 2022-02-28  NFLX      394.52
-##    3 │ 2022-03-31  NFLX      374.59
-##    4 │ 2022-04-30  NFLX      190.36
-##    5 │ 2022-05-31  NFLX      197.44
-##    6 │ 2022-06-30  NFLX      174.87
-##    7 │ 2022-07-31  NFLX      224.9
-##    8 │ 2022-08-31  NFLX      223.56
-##    9 │ 2022-09-30  NFLX      235.44
-##   10 │ 2022-10-31  NFLX      291.88
-##   11 │ 2022-11-30  NFLX      305.53
-##   12 │ 2022-12-31  NFLX      291.12
-```
-
 ## Plotting
 
 ### Plotting with *Plots.jl* 
@@ -552,14 +703,14 @@ Plots.plot!(xlabel = "Date");
 Plots.plot!(ylabel = "Price")
 ```
 
-![](index.en_files/figure-html/unnamed-chunk-27-J1.png)<!-- -->
+![](index.en_files/figure-html/unnamed-chunk-29-J1.png)<!-- -->
 
 ### Plotting with *Gadfly.jl*
-- I'm similar to ***ggplot2*** in **R**,
+- I'm similar to ***ggplot2*** in **R**
 - **not similar to anything** in Python. **Python never succeeded in plotting**.
 - I'm way way way better than Python,
 - but less sophisticated than R.
-- I know R is by far the best in Plotting
+- I know R is by far the best in Plotting,
 - but I'm doing my best to catch it.
 
 ```julia

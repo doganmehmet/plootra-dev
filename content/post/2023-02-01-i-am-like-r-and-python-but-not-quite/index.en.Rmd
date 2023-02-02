@@ -39,9 +39,9 @@ println("I'm like like Python and R, but not quite")
 ### Installing a package
 I install new packages using:
 - ***Pkg.add("package_name")***
-```{julia}
+```{julia, warning=FALSE}
 using Pkg
-#Pkg.add("DataFrames") 
+Pkg.add("DataFrames") 
 ```
 
 
@@ -49,22 +49,61 @@ using Pkg
 I add packages to my current session via ***using*** keyword:
 - ***using package_name***
 ```{julia}
-using Plots # similar to base R plot, matplotlib in Python
-using Gadfly # similar to ggplot2, not similar to anything in python - this was never achieved in Python
-using RDatasets # equivalent of rdatasets package
 using DataFrames # similar to data.frame, data.table and dplyr in R, pandas in Python
 using CSV # similar to read.csv, readr in R, pandas in Python
 using Statistics # similar to base R, base Python
 using Dates # similar to date in base R and datetime in python
+using Plots # similar to base R plot, matplotlib in Python
+using Gadfly # similar to ggplot2, not similar to anything in python - this was never achieved in Python
 ```
 
 ## Vectors
-I'm same as python
+I'm like python,
+- but I can do element-wise calculations like R
+- my syntax is a little bit strange in particularly when multiplying and dividing
+- because I don't want you to be wrong.
 
+### Creating a vector
 ```{julia}
-my_vector = [1, 2, 3, 4, 5]
+first_vector = [1, 2, 3, 4, 5]
+second_vector= [10, 10, 10, 10, 10]
 ```
 
+### Element-wise calculations
+```{julia}
+# Addition
+first_vector + second_vector
+first_vector .+ second_vector # the same as above
+
+# Subtraction
+first_vector - second_vector
+first_vector .- second_vector
+
+# Multiplication
+first_vector .* second_vector
+
+# Division
+first_vector ./ second_vector
+```
+
+### Slicing vectors
+- My index starts from 0, just like R
+- When slicing, I include last index value like R but unlike Python
+
+```{julia}
+my_vect = [1, 2, 3, 4, 5];
+
+# Select the first element
+my_vect[1]
+my_vect[begin] # the same as above
+
+# Select the first three elements
+my_vect[1:3]
+
+# Select the last element
+my_vect[end]
+
+```
 
 ## Control Flow
 
@@ -86,7 +125,7 @@ end
 - I'm like Python but without **:**
 - like R but w/o ugly ***{ }s***
 - I must end with ***end***
-- Unlike Python I don't need ***indentation*** but I prefer to have it.
+- Unlike Python I don't need ***indentation*** but I prefer to have it
 - If I want to access a global variable inside of me I set ***global variable_name***.
 ```{julia}
 x = 5;
@@ -108,7 +147,8 @@ for i in 1:10
 end
 ```
 ## Functions
-- I'm like R but w/o ugly ***{ }s***
+- I'm like Python but without **:**
+- like R but w/o ugly ***{ }s***
 - I must end with ***end***
 - Unlike Python I don't need ***indentation*** but I prefer to have it.
 ```{julia}
@@ -135,9 +175,10 @@ I'm like R and a bit of Python
 df = DataFrame(Stock=["A", "B", "C", "D"], Price=1:4)
 ```
 ### Slicing DataFrames
-I'm like R and Python but not quite. 
+- My index starts from 0, just like R
+- I include last index value when slicing like R but unlike Python
 - I don't need annoying **loc** and **iloc** 
-- I don't complain about copying.
+- and don't complain about copying as in Python
 ```{julia}
 df.Stock # all elements of Stock column
 ```
@@ -179,31 +220,13 @@ I have my own syntax.
 stockPrices.Date = Date.(stockPrices.Date, "yyyy-mm-dd")
 ```
 
+### Displaying first n and last n elements
 ```{julia}
 ### Frist 5 elements - I'm like R and Python but "first" instead of "head"
 first(stockPrices, 5)
 
 ### Last 5 elements - I'm like R and Python but "last" instead of "tail"
 last(stockPrices, 5)
-```
-
-## Importing and exporting data
-
-### Writing a DataFrame to csv
-I'm like R and Python but I have my own syntax. 
-- I first accept ***filename.csv*** 
-- and then DataFrame ***name***
-
-```{julia}
-CSV.write("stockPrices.csv", stockPrices)
-```
-
-### Reading data from csv as DataFrame
-I am neither Python nor R.
-- First ***import*** me 
-- and then hug me with ***DataFrame()***
-```{julia}
-stockPrices = DataFrame(CSV.File("stockPrices.csv"))
 ```
 
 
@@ -227,6 +250,24 @@ filter(row -> row.Stock == "NFLX", stockPrices) # filter values for Netflix
 # you can use any name in place of row
 filter(DonaldTrump -> DonaldTrump.Stock == "NFLX", stockPrices) # I will be gladly working as well
 ```
+## Importing and exporting data
+
+### Writing a DataFrame to csv
+I'm like R and Python but I have my own syntax. 
+- I first accept ***filename.csv*** 
+- and then DataFrame ***name***
+```{julia}
+CSV.write("stockPrices.csv", stockPrices)
+```
+
+### Reading data from csv as DataFrame
+I am neither Python nor R.
+- First ***import*** me 
+- and then hug me with ***DataFrame()***
+```{julia}
+stockPrices = DataFrame(CSV.File("stockPrices.csv"))
+```
+
 
 ## Plotting
 
@@ -242,11 +283,11 @@ Plots.plot!(ylabel = "Price")
 ```
 
 ### Plotting with *Gadfly.jl*
-- I'm similar to ***ggplot2*** in **R**,
+- I'm similar to ***ggplot2*** in **R**
 - **not similar to anything** in Python. **Python never succeeded in plotting**.
 - I'm way way way better than Python,
 - but less sophisticated than R.
-- I know R is by far the best in Plotting
+- I know R is by far the best in Plotting,
 - but I'm doing my best to catch it.
 ```{julia}
 Gadfly.plot(stockPrices, x=:Date, y=:Price, Geom.line, color = :Stock)
