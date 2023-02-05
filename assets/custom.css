@@ -1,1 +1,6 @@
 /* Place custom css here. */
+
+/*Changes the background color of code chunks*/
+.highlight pre {
+background-color: #000000 !important; /*#F9F9F9 is used by Medium*/
+}

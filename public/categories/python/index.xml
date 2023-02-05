@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Plootra | Analytics for financial markets and investing</title>
+    <link>https://plootra.com/categories/python/</link>
+    <description>Recent content in Python on Plootra | Analytics for financial markets and investing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2023</copyright>
+    <lastBuildDate>Sun, 05 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://plootra.com/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Matrices and Portfolio Variance</title>
+      <link>https://plootra.com/2023/02/matrices-and-portfolio-variance/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://plootra.com/2023/02/matrices-and-portfolio-variance/</guid>
+      <description>Matrices are widely used in portfolio theory, financial economics, and econometrics because of the need to manipulate significant data inputs. In this article, you will learn core matrix operations and how portfolio variance, widely used in portfolio allocation decisions, can be represented in the matrix form and implementations in R, Julia, and Python languages. 1. Matrix operations
+2. Portfolio variance in matrix form
+3. Implementation in R, Julia, and Python</description>
+    </item>
+    
+  </channel>
+</rss>

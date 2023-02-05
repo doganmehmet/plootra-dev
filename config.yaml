@@ -11,6 +11,8 @@ title: Plootra | Analytics for financial markets and investing
 # disqusShortname: xxxxx # to enable Disqus in the website
 googleAnalytics: G-2MNSX43ZM3
 enableEmoji: true
+math: true
+
 
 permalinks:
   # /: /:year/:month/:slug/
