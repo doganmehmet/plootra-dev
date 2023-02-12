@@ -84,9 +84,7 @@ You can learn more about R if you don\'t know already at
 
 You can download R from
 
-[Download R-4.2.2 for Windows. The R-project for statistical computing.](https://cran.r-project.org/bin/windows/base/)
-
-\
+[Download R](https://cran.r-project.org/bin/windows/base/)
 
 #### 2. RStudio
 
