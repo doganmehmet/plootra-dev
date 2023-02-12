@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="en"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Make Beautiful Websites with R - Part 1: Introduction - Plootra | Analytics for financial markets and investing</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="You can create a website with R on a local computer, share your R, Python, and Julia (&#43; likely others) code, and display the result in your content.
+This is the first part of the &quot;Make Beautiful Websites with R&quot; series. This article will teach you the architecture and tech track of creating beautiful websites with R.
+Why make websites in R?
+Extremely fast because it is a static website." />
+  <meta
+    name="author"
+    content="Mehmet Dogan"
+  />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://plootra.com/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://plootra.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="https://plootra.com/theme.png" />
+
+  
+  
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://plootra.com/github.svg" />
+  
+  <link rel="preload" as="image" href="https://plootra.com/rss.svg" />
+  
+
+  
+  <link rel="icon" href="https://plootra.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://plootra.com/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  
+
+  
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-2MNSX43ZM3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2MNSX43ZM3"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-2MNSX43ZM3', { 'anonymize_ip': false });
+}
+</script>
+
+  
+  
+  
+  <meta property="og:title" content="Make Beautiful Websites with R - Part 1: Introduction" />
+<meta property="og:description" content="Make your website with R and share your analysis with R, Python, and Julia" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://plootra.com/2023/02/make-beautiful-websites-with-r-part-1-introduction/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-02-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-11T00:00:00+00:00" />
+
+
+  
+  <meta itemprop="name" content="Make Beautiful Websites with R - Part 1: Introduction">
+<meta itemprop="description" content="Make your website with R and share your analysis with R, Python, and Julia"><meta itemprop="datePublished" content="2023-02-11T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-02-11T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1847">
+<meta itemprop="keywords" content="blogdown,Julia,R,Python,Website," />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Make Beautiful Websites with R - Part 1: Introduction"/>
+<meta name="twitter:description" content="Make your website with R and share your analysis with R, Python, and Julia"/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href="https://plootra.com/"
+      >Plootra</a>
+    
+    
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >Contact</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/doganmehmet "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href=" https://plootra.com/index.xml "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">Make Beautiful Websites with R - Part 1: Introduction</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Feb 11, 2023</time>
+      
+      
+      <span class="mx-1">&middot;</span>
+      <span>Mehmet Dogan</span>
+      
+      
+      
+      
+      <span class="mx-1">&middot;</span>
+      <span>9 min read</span>
+      
+  
+      
+    </div>
+    
+  </header>
+
+  <section><p><img src="https://cdn-images-1.medium.com/max/800/1*bjXDGeeclkihLcUoay5HKA.png" alt="The architecture of the beautiful website with R, image by the author"></p>
+<p>You can create a website with R on a local computer, share your <strong>R</strong>, <strong>Python</strong>, and <strong>Julia</strong> (+ likely others) code, and display the result in your content.</p>
+<p>This is the first part of the &quot;<em><strong>Make Beautiful Websites with R</strong></em>&quot; series. This article will teach you the architecture and tech track of creating beautiful websites with R.</p>
+<p>Why make websites in R?</p>
+<ul>
+<li>
+<p>Extremely fast because it is a static website.</p>
+</li>
+<li>
+<p>Include your R, Julia, and Python code and display the output.</p>
+</li>
+<li>
+<p>Use RStudio Visual R Markdown editor.</p>
+</li>
+<li>
+<p>Supports Markdown, RMarkdown, and Hugo functionalities.</p>
+</li>
+<li>
+<p>It does not require server-side scripts such as PHP or databases like WordPress does.</p>
+</li>
+<li>
+<p>It is cool to have your website with, end-to-end, the entire architecture designed and implemented by you.</p>
+</li>
+</ul>
+<p>Imagine writing on <a href="https://medium.com/"><strong>medium</strong></a>; you write about some topic, put forward an idea or theory, and write code to show how it works. You do the same here, but your code (R, Python, Julia, and likely others) will be executed, and its output will be displayed in your article. </p>
+<p>You can do many other things with your website besides sharing your code and displaying its outcome.</p>
+<p>You can find the tech track below for creating websites with R. It may look daunting at first, but each step is simple, maybe except for deploying your website to a server, but I will guide you through it so that it will be easy.</p>
+<hr>
+<p>Tech track for a beautiful website with R</p>
+<ol>
+<li>
+<p>R</p>
+</li>
+<li>
+<p>RStudio</p>
+</li>
+<li>
+<p>Blogdown package (your website is ready for deployment in this step)</p>
+</li>
+<li>
+<p>Hugo</p>
+</li>
+<li>
+<p>Digital Ocean</p>
+</li>
+<li>
+<p>PuTTY (for Windows)</p>
+</li>
+<li>
+<p>Ubuntu Server configurations</p>
+</li>
+<li>
+<p>WinSCP (option 1) (for Windows)</p>
+</li>
+<li>
+<p>Recommended workflow (Option 2)</p>
+</li>
+<li>
+<p>Git (recommended, option 2) </p>
+</li>
+<li>
+<p>GitHub (recommended, option 2)</p>
+</li>
+<li>
+<p>Manually pulling website content from GitHub (a)</p>
+</li>
+<li>
+<p>Automated pulling website content from GitHub via cron jobs (b)</p>
+</li>
+</ol>
+<hr>
+<p>Of course, depending on your needs, the list can be shortened or extended, but it covers all the necessary software for building a beautiful website with R.</p>
+<h4 id="1-r">1. R</h4>
+<p>You can learn more about R if you don't know already at</p>
+<p><a href="https://www.r-project.org/about.html">R: What is R? (r-project.org)</a></p>
+<p>You can download R from</p>
+<p><a href="https://cran.r-project.org/bin/windows/base/">Download R-4.2.2 for Windows. The R-project for statistical computing.</a></p>
+<p>\</p>
+<h4 id="2-rstudio">2. RStudio</h4>
+<blockquote>
+<p>RStudio is an integrated development environment, IDE, for R, a programming language for statistical computing and graphics. (<a href="https://en.wikipedia.org/wiki/RStudio">Wikipedia</a>)</p>
+</blockquote>
+<p>Download RStudio from</p>
+<p><a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop &mdash; Posit</a></p>
+<p>After the <strong>v1.4</strong> release, <a href="https://posit.co/"><strong>RStudio</strong></a>(now Posit) included a <a href="https://rstudio.github.io/visual-markdown-editing/"><strong>Visual R Markdown Editor</strong></a> that gives you a decent CMS-like experience. You can think this is something similar to the medium's editor. Add a heading, write any text, bold or italic, insert a table or picture, code chunk, latex math symbols or equation, and many others. Then, as outlined at the start, your codes are executed, and the outputs of code chunks are displayed.</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/0*_CpAJ4qjJDVbKgUX.png" alt="image from RStudio"></p>
+<p>Apart from using RStudio for writing articles for your website, it is the most used IDE for R programming language and one of the most advanced IDEs ever created for statistics and data science. </p>
+<h4 id="3-blogdown-package">3. Blogdown package</h4>
+<p>The <a href="https://bookdown.org/yihui/blogdown/"><strong>blogdown</strong></a>is an R package that helps you create general-purpose (static) websites with <a href="https://rmarkdown.rstudio.com/">R Markdown</a> and <a href="https://gohugo.io/">Hugo</a>. The &quot;blog&quot; in the package&rsquo;s name (blogdown) should not confuse you; it is also used for general-purpose websites, not only blogs.</p>
+<p>Your fantastic website is ready at this stage. The next step is to deploy it to a server so everyone can visit it and see the awesome content of your website. I will show you how to deploy your website to Ubuntu Server from Digital Ocean in the Make Beautiful Websites with R series.</p>
+<h4 id="4-hugo">4. Hugo</h4>
+<blockquote>
+<p><a href="https://gohugo.io/">Hugo</a> is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again. (<a href="https://gohugo.io/">Hugo</a>)</p>
+</blockquote>
+<p>We will not be learning Hugo in this series. Hugo is a static site generator used by the blogdown package. We will be only changing the content of the configuration files for our needs, but the details of Hugo are beyond the scope of the Make Beautiful Websites with R series. </p>
+<p>You can read &quot;<a href="https://davidwalsh.name/introduction-static-site-generators">An Introduction to Static Site Generators</a>,&quot; where David Walsh perfectly explains what a static site is and how it differs from dynamic sites.</p>
+<p>If you are interested in learning more about static sites, you can read the following articles:</p>
+<ul>
+<li>
+<p><a href="https://gettingthingstech.com/hugo-vs.-wordpress-page-load-speed-comparison-hugo-leaves-wordpress-in-its-dust/">&quot;Hugo vs. WordPress page load speed comparison: Hugo leaves WordPress in its dust&quot;, GettingThingsTech</a></p>
+</li>
+<li>
+<p><a href="https://github.com/gohugoio/hugoDocs/files/1242701/static-site-generators.pdf">&quot;Static Site Generators&quot;, O'Reilly</a></p>
+</li>
+<li>
+<p><a href="https://www.staticgen.com/">StaticGen: Top Open-Source Static Site Generators (GitHub Stars)</a></p>
+</li>
+<li>
+<p><a href="https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators/">&quot;Top 10 Static Website Generators&quot;, Netlify blog</a></p>
+</li>
+<li>
+<p><a href="https://dotcms.com/blog/post/the-resurgence-of-static">&quot;The Resurgence of Static&quot;, dotCMS</a></p>
+</li>
+</ul>
+<h4 id="5-digitalocean">5. Digital Ocean</h4>
+<p>The below picture high level displays how you, I, and the rest of the people in the world visit websites from their browsers. Generally, almost always, the content of the websites is stored in <em><strong>Linux Server</strong></em> (I prefer Ubuntu) and served to the world by a <em><strong>Web Server</strong></em> within the <em><strong>Server</strong></em>.</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*ljX8KtorRPIDo6EKg2uGaQ.png" alt="How people visit websites from their browsers, image by author"></p>
+<p><em><strong>Caution:</strong> Ubuntu is a Linux distribution, and I use &quot;Server,&quot; &quot;Ubuntu Server,&quot; and &quot;Linux Server&quot; interchangeably in this article. All refer to the Ubuntu Server.</em></p>
+<p>If you know how to use other Linux distributions, feel free to use something else. However, I prefer <strong>Ubuntu</strong> because it's the only Linux distribution I know how to use and the most used Linux distribution in the world. </p>
+<p>Deploying your website to the server is the most demanding part of the entire process. Nevertheless, I will guide you through and provide visuals to help you easily deploy your website to the server.</p>
+<p>You can rent a server from many companies, but I recommend using <a href="https://m.do.co/c/5e81260c66f5"><strong>Digital Ocean</strong></a> because it is straightforward. Digital Ocean's dashboard is easy to use, and most importantly, you know how much you will pay, unlike Microsoft Azure and AWS.</p>
+<p>If you want to use a server from <a href="https://m.do.co/c/5e81260c66f5">Digital Ocean</a>, you can use <a href="https://m.do.co/c/5e81260c66f5"><strong>my referral link</strong></a> to have one. You will get a <strong>$200 free credit</strong> for 60 days using my referral link.</p>
+<p><em>Nevertheless, as a newcomer to Digital Ocean, you will still get $200 even if you don't use my referral link. By using the referral link, you would have also helped me to get some free credit.</em></p>
+<h4 id="6-putty">6. PuTTY</h4>
+<p>After the previous step, we have a remote server sitting in one of the data centers of Digital Ocean. We need to connect this remote server to make the necessary configurations to deploy our website.</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*ieS3Y8Nb5JWg1npCYSSdCA.png" alt="Connecting Ubuntu server via PuTTY, image by author"></p>
+<p>I have a windows PC; therefore will be connecting to the server using PuTTY. If you are using Mac or Linux, there are other alternatives, and I believe the working logic is similar to PuTTY. </p>
+<h4 id="7-ubuntu-server-configurations">7. Ubuntu Server configurations</h4>
+<p>After connecting to Ubuntu Server from our PC using PuTTY (or other software for Mac or Linux), we need to configure the server so that our website can be served and accessed by others. We will also be installing and configuring a <strong>web server</strong> called <a href="https://nginx.org/"><em><strong>Nginx</strong></em></a>. The two most popular web servers are <a href="https://nginx.org/"><em><strong>Nginx</strong></em></a> and <a href="https://httpd.apache.org/"><em><strong>Apache</strong></em></a>. </p>
+<h4 id="8-winscp">8. WinSCP</h4>
+<p>You created your website on your PC and made the necessary configurations in Ubuntu Server. The next step is to transfer the content of your website from your PC to the remote Server.</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*0DTGHoK2AedyAc76VtBy1A.png" alt="Transferring content of the website from the local PC to the server via WinSCP, image by author"></p>
+<p>We use <a href="https://winscp.net/eng/index.php"><em><strong>WinSCP</strong></em></a> to transfer the files from our local PC to Ubuntu Server, or vice versa, using a visual interface. It is like moving files between folders on your PC. In this case, we will transfer website contents from our PC to a folder in Ubuntu Server. I will show how to do that using <a href="https://winscp.net/eng/index.php">WinSCP</a> in the following parts of the &quot;Make Beautiful Websites with R&quot; series. This will be <strong>Option 1</strong>. </p>
+<p>If you think this workflow meets your requirements and are willing to copy-paste your website's content when you make changes, you can directly skip through to the bottom of the page to read the conclusion.</p>
+<p>But I recommend <strong>Option 2</strong>, using <em><strong>Git</strong></em> and <em><strong>GitHub</strong></em> and scheduling a <em><strong>cron job</strong></em> in the server to automatically pull your content from GitHub and save it to the appropriate folder within your server. Your web server will then serve it to the world.</p>
+<h4 id="9-recommended-workflow">9. Recommended workflow</h4>
+<p>This is the recommended workflow for a beautiful website with R and is how I'm doing on <a href="https://plootra.com/">plootra.com</a>.</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*EsWJhUB7QkgmakiUZtGX9w.png" alt="An ideal architecture for a beautiful website with R, image by author"></p>
+<p>In this approach:</p>
+<ul>
+<li>
+<p><strong>1)</strong> You will be creating your content in <strong>R Studio</strong></p>
+</li>
+<li>
+<p>and <strong>2)</strong> pushing this content to <strong>GitHub</strong> using <strong>Git</strong> (<em><strong>super easy with R Studio</strong></em>)</p>
+</li>
+<li>
+<p>And the content of your website will be <strong>3)</strong> automatically <strong>pulled</strong> by the <strong>cron job</strong> <strong>in the server</strong> and <strong>copied</strong> to the appropriate folder so that it can be served to the world by your <strong>web server</strong>.</p>
+</li>
+</ul>
+<p>One significant advantage of this approach is that if your PC dies, you lose folders, change PC, etc., you can always pull your website's content from GitHub to your current PC.</p>
+<h4 id="10-git">10. Git</h4>
+<blockquote>
+<p>Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. (<a href="https://git-scm.com/">Git</a>)</p>
+</blockquote>
+<p>If you want to learn more about Git version control, you can read the <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository">second chapter of the <strong>progit</strong> book</a>. You will learn all the basics you need by reading just one chapter.</p>
+<p>RStudio here again will be a great help to us. We will be <em><strong>committing</strong></em> and <em><strong>pushing</strong></em> all changes to GitHub from our local PC, i.e., a new article, using the commit button in RStudio.</p>
+<h4 id="11-github">11. GitHub</h4>
+<p>Git and GitHub are not the same! I always thought they were the same before I started to use them 😄</p>
+<blockquote>
+<p><strong>GitHub</strong> is an Internet hosting service for software development and version control using <a href="https://en.wikipedia.org/wiki/Git" title="Git">Git</a>. It provides the distributed version control of Git plus access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project. Headquartered in California, it has been a subsidiary of Microsoft since 2018 (<a href="https://en.wikipedia.org/wiki/GitHub">Wikipedia</a>)</p>
+</blockquote>
+<p>You can think of GitHub as a visual version control. The content of your website is first sent to GitHub and then sent to the &quot;<em><strong>web server</strong></em>&quot; within <em><strong>Ubuntu Server</strong></em>.</p>
+<p>I could not explain simpler than this and would appreciate it if you could recommend a more simple and elegant explanation than what I provided above.</p>
+<h4 id="12-manually-pulling-website-content-from-github-either-a">12. Manually pulling website content from GitHub (either a)</h4>
+<p>After you push the content of your website to GitHub, you need to transfer it to the server. You can connect to the server using PuTTy and manually write commands on the server's terminal.</p>
+<h4 id="13-automated-pulling-website-content-from-github-via-cron-jobs-or-b">13. Automated pulling website content from GitHub via cron jobs (or b)</h4>
+<p>I rarely connect to my server because the scripts I created in the server automatically do the job for me every day at a specific time. To automate the task in Ubuntu Server, we write &quot;shell scripts&quot; and enter commands in <strong>crontab</strong>. Cron will automatically execute the scripts and do the job for us.</p>
+<h4 id="conclusion"><strong>Conclusion</strong></h4>
+<p>Hopefully, you enjoyed reading this article and now know what the architecture of a website with R looks like. Each step is simple, and I'll explain each in detail in the following articles.</p>
+<p>Once you have it, you have it. After that, the rest is fun and joy. </p>
+<p>I would love to see your beautiful website with R, and please share the URL in the comments if you have one.</p>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://plootra.com/tags/blogdown"
+      >blogdown</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://plootra.com/tags/julia"
+      >Julia</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://plootra.com/tags/r"
+      >R</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://plootra.com/tags/python"
+      >Python</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://plootra.com/tags/website"
+      >Website</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  <nav
+    class="mt-24 flex rounded-lg bg-black/[3%] p-1.5 text-lg dark:bg-white/[8%]"
+  >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-md p-6 pl-3 no-underline hover:bg-black/[2%]"
+      href="https://plootra.com/2023/02/matrices-and-portfolio-variance/"
+      ><span>Matrices and Portfolio Variance</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+
+  
+  
+  <div class="mt-24" id="graphcomment"></div>
+  <script type="text/javascript">
+    var __semio__params = {
+      graphcommentId: 'plootra',
+      behaviour: {
+        
+      },
+      
+    };
+
+    function __semio__onload() {
+      __semio__gc_graphlogin(__semio__params);
+    }
+
+    (function () {
+      var gc = document.createElement('script');
+      gc.type = 'text/javascript';
+      gc.async = true;
+      gc.onload = __semio__onload;
+      gc.defer = true;
+      gc.src =
+        'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(gc);
+    })();
+  </script>
+  
+</article>
+
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://plootra.com/">Plootra</a> 
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >▷ Paper 6</a
+  >
+
+
+</footer>
+
+  </body>
+</html>

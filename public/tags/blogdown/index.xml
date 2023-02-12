@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2023</copyright>
-    <lastBuildDate>Fri, 27 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://plootra.com/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://plootra.com/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Make Beautiful Websites with R - Part 1: Introduction</title>
+      <link>https://plootra.com/2023/02/make-beautiful-websites-with-r-part-1-introduction/</link>
+      <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://plootra.com/2023/02/make-beautiful-websites-with-r-part-1-introduction/</guid>
+      <description>You can create a website with R on a local computer, share your R, Python, and Julia (+ likely others) code, and display the result in your content.
+This is the first part of the &amp;quot;Make Beautiful Websites with R&amp;quot; series. This article will teach you the architecture and tech track of creating beautiful websites with R.
+Why make websites in R?
+Extremely fast because it is a static website.</description>
+    </item>
+    
     <item>
       <title>How to Embed Shiny Apps Into a blogdown Post</title>
       <link>https://plootra.com/2023/01/embeding-shiny-into-a-blogdown-post/</link>
