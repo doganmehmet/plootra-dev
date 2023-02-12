@@ -55,7 +55,7 @@ A vector is a special matrix case with only one column or row.
 
 #### Matrix Definition
 
-Let\'s start by defining two matrices and one vector we will use throughout this section.
+Let's start by defining two matrices and one vector we will use throughout this section.
 
 <img src="https://cdn-images-1.medium.com/max/800/1*Cuh0hPFhMXhJVpVWiFFleQ.png" alt="Image by author" width="469"/>
 
