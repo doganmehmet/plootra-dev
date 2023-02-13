@@ -48,8 +48,8 @@
   
   <meta name="theme-color" />
   
-  <meta name="description" content="You can create a website with R on a local computer, share your R, Python, and Julia (&#43; likely others) code, and display the result in your content.
-This is the first part of the &quot;Make Beautiful Websites with R&quot; series. This article will teach you the architecture and tech track of creating beautiful websites with R.
+  <meta name="description" content="You can create a website with R, share your R, Python, and Julia (&#43; likely others) code, and display the result in the content of your article..
+This is the first part of the &ldquo;Make Beautiful Websites with R&rdquo; series. This article will teach you the architecture and tech track of creating beautiful websites with R.
 Why make websites in R?
 Extremely fast because it is a static website." />
   <meta
@@ -142,7 +142,7 @@ if (!doNotTrack) {
   <meta itemprop="name" content="Make Beautiful Websites with R - Part 1: Introduction">
 <meta itemprop="description" content="Make your website with R and share your analysis with R, Python, and Julia"><meta itemprop="datePublished" content="2023-02-11T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-02-11T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1839">
+<meta itemprop="wordCount" content="1838">
 <meta itemprop="keywords" content="blogdown,Julia,R,Python,Website," />
   
   <meta name="twitter:card" content="summary"/>
@@ -293,8 +293,8 @@ if (!doNotTrack) {
   </header>
 
   <section><p><img src="https://cdn-images-1.medium.com/max/800/1*bjXDGeeclkihLcUoay5HKA.png" alt="The architecture of the beautiful website with R, image by the author"></p>
-<p>You can create a website with R on a local computer, share your <strong>R</strong>, <strong>Python</strong>, and <strong>Julia</strong> (+ likely others) code, and display the result in your content.</p>
-<p>This is the first part of the &quot;<em><strong>Make Beautiful Websites with R</strong></em>&quot; series. This article will teach you the architecture and tech track of creating beautiful websites with R.</p>
+<p>You can create a website with R, share your <strong>R</strong>, <strong>Python</strong>, and <strong>Julia</strong> (+ likely others) code, and display the result in the content of your article..</p>
+<p>This is the first part of the &ldquo;<em><strong>Make Beautiful Websites with R</strong></em>&rdquo; series. This article will teach you the architecture and tech track of creating beautiful websites with R.</p>
 <p>Why make websites in R?</p>
 <ul>
 <li>
@@ -365,7 +365,7 @@ if (!doNotTrack) {
 <hr>
 <p>Of course, depending on your needs, the list can be shortened or extended, but it covers all the necessary software for building a beautiful website with R.</p>
 <h4 id="1-r">1. R</h4>
-<p>You can learn more about R if you don't know already at</p>
+<p>You can learn more about R if you don&rsquo;t know already at</p>
 <p><a href="https://www.r-project.org/about.html">R: What is R? (r-project.org)</a></p>
 <p>You can download R from</p>
 <p><a href="https://cran.r-project.org/bin/windows/base/">Download R</a></p>
@@ -375,45 +375,45 @@ if (!doNotTrack) {
 </blockquote>
 <p>Download RStudio from</p>
 <p><a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop &mdash; Posit</a></p>
-<p>After the <strong>v1.4</strong> release, <a href="https://posit.co/"><strong>RStudio</strong></a>(now Posit) included a <a href="https://rstudio.github.io/visual-markdown-editing/"><strong>Visual R Markdown Editor</strong></a> that gives you a decent CMS-like experience. You can think this is something similar to the medium's editor. Add a heading, write any text, bold or italic, insert a table or picture, code chunk, latex math symbols or equation, and many others. Then, as outlined at the start, your codes are executed, and the outputs of code chunks are displayed.</p>
+<p>After the <strong>v1.4</strong> release, <a href="https://posit.co/"><strong>RStudio</strong></a>(now Posit) included a <a href="https://rstudio.github.io/visual-markdown-editing/"><strong>Visual R Markdown Editor</strong></a> that gives you a decent CMS-like experience. You can think this is something similar to the medium&rsquo;s editor. Add a heading, write any text, bold or italic, insert a table or picture, code chunk, latex math symbols or equation, and many others. Then, as outlined at the start, your codes are executed, and the outputs of code chunks are displayed.</p>
 <p><img src="https://cdn-images-1.medium.com/max/800/0*_CpAJ4qjJDVbKgUX.png" alt="image from RStudio"></p>
 <p>Apart from using RStudio for writing articles for your website, it is the most used IDE for R programming language and one of the most advanced IDEs ever created for statistics and data science. </p>
 <h4 id="3-blogdown-package">3. Blogdown package</h4>
-<p>The <a href="https://bookdown.org/yihui/blogdown/"><strong>blogdown</strong></a>is an R package that helps you create general-purpose (static) websites with <a href="https://rmarkdown.rstudio.com/">R Markdown</a> and <a href="https://gohugo.io/">Hugo</a>. The &quot;blog&quot; in the package&rsquo;s name (blogdown) should not confuse you; it is also used for general-purpose websites, not only blogs.</p>
+<p>The <a href="https://bookdown.org/yihui/blogdown/"><strong>blogdown</strong></a>is an R package that helps you create general-purpose (static) websites with <a href="https://rmarkdown.rstudio.com/">R Markdown</a> and <a href="https://gohugo.io/">Hugo</a>. The &ldquo;blog&rdquo; in the package&rsquo;s name (blogdown) should not confuse you; it is also used for general-purpose websites, not only blogs.</p>
 <p>Your fantastic website is ready at this stage. The next step is to deploy it to a server so everyone can visit it and see the awesome content of your website. I will show you how to deploy your website to Ubuntu Server from Digital Ocean in the Make Beautiful Websites with R series.</p>
 <h4 id="4-hugo">4. Hugo</h4>
 <blockquote>
 <p><a href="https://gohugo.io/">Hugo</a> is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again. (<a href="https://gohugo.io/">Hugo</a>)</p>
 </blockquote>
 <p>We will not be learning Hugo in this series. Hugo is a static site generator used by the blogdown package. We will be only changing the content of the configuration files for our needs, but the details of Hugo are beyond the scope of the Make Beautiful Websites with R series. </p>
-<p>You can read &quot;<a href="https://davidwalsh.name/introduction-static-site-generators">An Introduction to Static Site Generators</a>,&quot; where David Walsh perfectly explains what a static site is and how it differs from dynamic sites.</p>
+<p>You can read &ldquo;<a href="https://davidwalsh.name/introduction-static-site-generators">An Introduction to Static Site Generators</a>,&rdquo; where David Walsh perfectly explains what a static site is and how it differs from dynamic sites.</p>
 <p>If you are interested in learning more about static sites, you can read the following articles:</p>
 <ul>
 <li>
-<p><a href="https://gettingthingstech.com/hugo-vs.-wordpress-page-load-speed-comparison-hugo-leaves-wordpress-in-its-dust/">&quot;Hugo vs. WordPress page load speed comparison: Hugo leaves WordPress in its dust&quot;, GettingThingsTech</a></p>
+<p><a href="https://gettingthingstech.com/hugo-vs.-wordpress-page-load-speed-comparison-hugo-leaves-wordpress-in-its-dust/">&ldquo;Hugo vs. WordPress page load speed comparison: Hugo leaves WordPress in its dust&rdquo;, GettingThingsTech</a></p>
 </li>
 <li>
-<p><a href="https://github.com/gohugoio/hugoDocs/files/1242701/static-site-generators.pdf">&quot;Static Site Generators&quot;, O'Reilly</a></p>
+<p><a href="https://github.com/gohugoio/hugoDocs/files/1242701/static-site-generators.pdf">&ldquo;Static Site Generators&rdquo;, O&rsquo;Reilly</a></p>
 </li>
 <li>
 <p><a href="https://www.staticgen.com/">StaticGen: Top Open-Source Static Site Generators (GitHub Stars)</a></p>
 </li>
 <li>
-<p><a href="https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators/">&quot;Top 10 Static Website Generators&quot;, Netlify blog</a></p>
+<p><a href="https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators/">&ldquo;Top 10 Static Website Generators&rdquo;, Netlify blog</a></p>
 </li>
 <li>
-<p><a href="https://dotcms.com/blog/post/the-resurgence-of-static">&quot;The Resurgence of Static&quot;, dotCMS</a></p>
+<p><a href="https://dotcms.com/blog/post/the-resurgence-of-static">&ldquo;The Resurgence of Static&rdquo;, dotCMS</a></p>
 </li>
 </ul>
 <h4 id="5-digitalocean">5. Digital Ocean</h4>
 <p>The below picture high level displays how you, I, and the rest of the people in the world visit websites from their browsers. Generally, almost always, the content of the websites is stored in <em><strong>Linux Server</strong></em> (I prefer Ubuntu) and served to the world by a <em><strong>Web Server</strong></em> within the <em><strong>Server</strong></em>.</p>
 <p><img src="https://cdn-images-1.medium.com/max/800/1*ljX8KtorRPIDo6EKg2uGaQ.png" alt="How people visit websites from their browsers, image by author"></p>
-<p><em><strong>Caution:</strong> Ubuntu is a Linux distribution, and I use &quot;Server,&quot; &quot;Ubuntu Server,&quot; and &quot;Linux Server&quot; interchangeably in this article. All refer to the Ubuntu Server.</em></p>
-<p>If you know how to use other Linux distributions, feel free to use something else. However, I prefer <strong>Ubuntu</strong> because it's the only Linux distribution I know how to use and the most used Linux distribution in the world. </p>
+<p><em><strong>Caution:</strong> Ubuntu is a Linux distribution, and I use &ldquo;Server,&rdquo; &ldquo;Ubuntu Server,&rdquo; and &ldquo;Linux Server&rdquo; interchangeably in this article. All refer to the Ubuntu Server.</em></p>
+<p>If you know how to use other Linux distributions, feel free to use something else. However, I prefer <strong>Ubuntu</strong> because it&rsquo;s the only Linux distribution I know how to use and the most used Linux distribution in the world. </p>
 <p>Deploying your website to the server is the most demanding part of the entire process. Nevertheless, I will guide you through and provide visuals to help you easily deploy your website to the server.</p>
-<p>You can rent a server from many companies, but I recommend using <a href="https://m.do.co/c/5e81260c66f5"><strong>Digital Ocean</strong></a> because it is straightforward. Digital Ocean's dashboard is easy to use, and most importantly, you know how much you will pay, unlike Microsoft Azure and AWS.</p>
+<p>You can rent a server from many companies, but I recommend using <a href="https://m.do.co/c/5e81260c66f5"><strong>Digital Ocean</strong></a> because it is straightforward. Digital Ocean&rsquo;s dashboard is easy to use, and most importantly, you know how much you will pay, unlike Microsoft Azure and AWS.</p>
 <p>If you want to use a server from <a href="https://m.do.co/c/5e81260c66f5">Digital Ocean</a>, you can use <a href="https://m.do.co/c/5e81260c66f5"><strong>my referral link</strong></a> to have one. You will get a <strong>$200 free credit</strong> for 60 days using my referral link.</p>
-<p><em>Nevertheless, as a newcomer to Digital Ocean, you will still get $200 even if you don't use my referral link. By using the referral link, you would have also helped me to get some free credit.</em></p>
+<p><em>Nevertheless, as a newcomer to Digital Ocean, you will still get $200 even if you don&rsquo;t use my referral link. By using the referral link, you would have also helped me to get some free credit.</em></p>
 <h4 id="6-putty">6. PuTTY</h4>
 <p>After the previous step, we have a remote server sitting in one of the data centers of Digital Ocean. We need to connect this remote server to make the necessary configurations to deploy our website.</p>
 <p><img src="https://cdn-images-1.medium.com/max/800/1*ieS3Y8Nb5JWg1npCYSSdCA.png" alt="Connecting Ubuntu server via PuTTY, image by author"></p>
@@ -423,11 +423,11 @@ if (!doNotTrack) {
 <h4 id="8-winscp">8. WinSCP</h4>
 <p>You created your website on your PC and made the necessary configurations in Ubuntu Server. The next step is to transfer the content of your website from your PC to the remote Server.</p>
 <p><img src="https://cdn-images-1.medium.com/max/800/1*0DTGHoK2AedyAc76VtBy1A.png" alt="Transferring content of the website from the local PC to the server via WinSCP, image by author"></p>
-<p>We use <a href="https://winscp.net/eng/index.php"><em><strong>WinSCP</strong></em></a> to transfer the files from our local PC to Ubuntu Server, or vice versa, using a visual interface. It is like moving files between folders on your PC. In this case, we will transfer website contents from our PC to a folder in Ubuntu Server. I will show how to do that using <a href="https://winscp.net/eng/index.php">WinSCP</a> in the following parts of the &quot;Make Beautiful Websites with R&quot; series. This will be <strong>Option 1</strong>. </p>
-<p>If you think this workflow meets your requirements and are willing to copy-paste your website's content when you make changes, you can directly skip through to the bottom of the page to read the conclusion.</p>
+<p>We use <a href="https://winscp.net/eng/index.php"><em><strong>WinSCP</strong></em></a> to transfer the files from our local PC to Ubuntu Server, or vice versa, using a visual interface. It is like moving files between folders on your PC. In this case, we will transfer website contents from our PC to a folder in Ubuntu Server. I will show how to do that using <a href="https://winscp.net/eng/index.php">WinSCP</a> in the following parts of the &ldquo;Make Beautiful Websites with R&rdquo; series. This will be <strong>Option 1</strong>. </p>
+<p>If you think this workflow meets your requirements and are willing to copy-paste your website&rsquo;s content when you make changes, you can directly skip through to the bottom of the page to read the conclusion.</p>
 <p>But I recommend <strong>Option 2</strong>, using <em><strong>Git</strong></em> and <em><strong>GitHub</strong></em> and scheduling a <em><strong>cron job</strong></em> in the server to automatically pull your content from GitHub and save it to the appropriate folder within your server. Your web server will then serve it to the world.</p>
 <h4 id="9-recommended-workflow">9. Recommended workflow</h4>
-<p>This is the recommended workflow for a beautiful website with R and is how I'm doing on <a href="https://plootra.com/">plootra.com</a>.</p>
+<p>This is the recommended workflow for a beautiful website with R and is how I&rsquo;m doing on <a href="https://plootra.com/">plootra.com</a>.</p>
 <p><img src="https://cdn-images-1.medium.com/max/800/1*EsWJhUB7QkgmakiUZtGX9w.png" alt="An ideal architecture for a beautiful website with R, image by author"></p>
 <p>In this approach:</p>
 <ul>
@@ -441,7 +441,7 @@ if (!doNotTrack) {
 <p>And the content of your website will be <strong>3)</strong> automatically <strong>pulled</strong> by the <strong>cron job</strong> <strong>in the server</strong> and <strong>copied</strong> to the appropriate folder so that it can be served to the world by your <strong>web server</strong>.</p>
 </li>
 </ul>
-<p>One significant advantage of this approach is that if your PC dies, you lose folders, change PC, etc., you can always pull your website's content from GitHub to your current PC.</p>
+<p>One significant advantage of this approach is that if your PC dies, you lose folders, change PC, etc., you can always pull your website&rsquo;s content from GitHub to your current PC.</p>
 <h4 id="10-git">10. Git</h4>
 <blockquote>
 <p>Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. (<a href="https://git-scm.com/">Git</a>)</p>
@@ -453,14 +453,14 @@ if (!doNotTrack) {
 <blockquote>
 <p><strong>GitHub</strong> is an Internet hosting service for software development and version control using <a href="https://en.wikipedia.org/wiki/Git" title="Git">Git</a>. It provides the distributed version control of Git plus access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project. Headquartered in California, it has been a subsidiary of Microsoft since 2018 (<a href="https://en.wikipedia.org/wiki/GitHub">Wikipedia</a>)</p>
 </blockquote>
-<p>You can think of GitHub as a visual version control. The content of your website is first sent to GitHub and then sent to the &quot;<em><strong>web server</strong></em>&quot; within <em><strong>Ubuntu Server</strong></em>.</p>
+<p>You can think of GitHub as a visual version control. The content of your website is first sent to GitHub and then sent to the &ldquo;<em><strong>web server</strong></em>&rdquo; within <em><strong>Ubuntu Server</strong></em>.</p>
 <p>I could not explain simpler than this and would appreciate it if you could recommend a more simple and elegant explanation than what I provided above.</p>
 <h4 id="12-manually-pulling-website-content-from-github-either-a">12. Manually pulling website content from GitHub (either a)</h4>
-<p>After you push the content of your website to GitHub, you need to transfer it to the server. You can connect to the server using PuTTy and manually write commands on the server's terminal.</p>
+<p>After you push the content of your website to GitHub, you need to transfer it to the server. You can connect to the server using PuTTy and manually write commands on the server&rsquo;s terminal.</p>
 <h4 id="13-automated-pulling-website-content-from-github-via-cron-jobs-or-b">13. Automated pulling website content from GitHub via cron jobs (or b)</h4>
-<p>I rarely connect to my server because the scripts I created in the server automatically do the job for me every day at a specific time. To automate the task in Ubuntu Server, we write &quot;shell scripts&quot; and enter commands in <strong>crontab</strong>. Cron will automatically execute the scripts and do the job for us.</p>
+<p>I rarely connect to my server because the scripts I created in the server automatically do the job for me every day at a specific time. To automate the task in Ubuntu Server, we write &ldquo;shell scripts&rdquo; and enter commands in <strong>crontab</strong>. Cron will automatically execute the scripts and do the job for us.</p>
 <h4 id="conclusion"><strong>Conclusion</strong></h4>
-<p>Hopefully, you enjoyed reading this article and now know what the architecture of a website with R looks like. Each step is simple, and I'll explain each in detail in the following articles.</p>
+<p>Hopefully, you enjoyed reading this article and now know what the architecture of a website with R looks like. Each step is simple, and I&rsquo;ll explain each in detail in the following articles.</p>
 <p>Once you have it, you have it. After that, the rest is fun and joy. </p>
 <p>I would love to see your beautiful website with R, and please share the URL in the comments if you have one.</p>
 </section>

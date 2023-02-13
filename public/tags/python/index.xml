@@ -14,8 +14,8 @@
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://plootra.com/2023/02/make-beautiful-websites-with-r-part-1-introduction/</guid>
-      <description>You can create a website with R on a local computer, share your R, Python, and Julia (+ likely others) code, and display the result in your content.
-This is the first part of the &amp;quot;Make Beautiful Websites with R&amp;quot; series. This article will teach you the architecture and tech track of creating beautiful websites with R.
+      <description>You can create a website with R, share your R, Python, and Julia (+ likely others) code, and display the result in the content of your article..
+This is the first part of the &amp;ldquo;Make Beautiful Websites with R&amp;rdquo; series. This article will teach you the architecture and tech track of creating beautiful websites with R.
 Why make websites in R?
 Extremely fast because it is a static website.</description>
     </item>
